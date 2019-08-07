@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: mgt-exp-orders-api
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/4aa1e4f2-5e78-403c-9c2c-7e528832bd35/api/v1/orders # baseUri: https://localhost:8081/api/v1/orders
+version: v1
+
+traits:
+  order-api-headers: !include exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/mgt-ext-orders-headers/1.0.0/mgt-exp-orders-headers.raml
+  client-security: !include client-security.raml
+
+uses:
+  orders-lib: exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/mgt-exp-orders-lib/1.0.0/mgt-exp-orders-lib.raml
+  
+/book:
+  description: Experience api endpoint pointed to process api.
+  displayName: order
+  is: [order-api-headers,client-security]
+  post:
+    body: 
+      application/json:
+        example: !include examples/orderRequest.json
+    responses:
+      200:
+        body:
+          application/json:
+            example: {    
+  "status": "Successs",
+  "JobId": "123456789"
+}
+  
+/quotes:
+  description: Experience api endpoint pointed to process api.
+  displayName: order
+  is: [client-security]
+  post:
+    body:
+      application/json:
+        example: !include examples/quoteRequest.json
+    responses:
+      200:
+        body:
+          application/json:
+            example:  {    
+  "status": "Successs",
+  "JobId": "123456789"
+}
+  
+      
+  

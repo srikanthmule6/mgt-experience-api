@@ -1,0 +1,71 @@
+{
+  "dealId": "40452091",
+  "dealSubmitter": "Dan Buttelwerth",
+  "dealExpirationDate": "",
+  "approvalScope": "3",
+  "quickQuote": "QUOTE",
+  "dealStatus": "Re opened",
+  "dealType": "3",
+  "quoteId": "4720650611",
+  "dealName": "Duo Test- Do Not Touch",
+  "dealApprovalDate": "",
+  "ciscoAM": "Greg Simmons",
+  "securityAM": "",
+  "channelAccountManager": "Dylan Richard",
+  "customerName": "GOOGLE INC",
+  "customerFirstName": "",
+  "customerLastName": "",
+  "customerAddress": "6120 STEWART AVE",
+  "customerCity": "FREMONT",
+  "customerState": "CA",
+  "country": "US",
+  "zipCode": "94538",
+  "customerEmail": "",
+  "partyId": 187886963,
+  "verticalSegment": "VM_Sub",
+  "MarketSegment": "Service Provider",
+  "partnerName": "CINCINNATI BELL TECHNOLOGY SOLUTIONS",
+  "partnerType": "Direct",
+  "partnerContactName": "Dan Buttelwerth",
+  "partnerEmailAddress": "ciscopurchasing@cbts.cinbell.com",
+  "expectedProductAmount": "10000",
+  "ciscoTotalListPrice": "14400",
+  "expectedServiceAmount": "20000",
+  "rewardsSelected": "  ",
+  "productDetails": [
+    {
+      "productFamily": "DUO",
+      "productID": "DUO-SUB",
+      "productDesc": "DUO Security",
+      "productQty": "1",
+      "extListPrice": "0",
+      "extNetPrice": "0",
+      "initialTerm": "12",
+      "billingModel": "Prepaid Term",
+      "StartDate": "21-May-2019",
+      "childLines": [
+        {
+          "productID": "DUO-MFAU",
+          "productDesc": "DUO MFA",
+          "productQty": "200",
+          "extListPrice": 7200,
+          "extNetPrice": 7200
+        },
+        {
+          "productID": "DUO-TLPHNY",
+          "productDesc": "DUO MFA",
+          "productQty": "100",
+          "extListPrice": "7200",
+          "extNetPrice": "7200"
+        },
+        {
+          "productID": "SVS-DUO-BASIC",
+          "productDesc": "DUO Support - Basic",
+          "productQty": "1",
+          "extListPrice": "0",
+          "extNetPrice": "0"
+        }
+      ]
+    }
+  ]
+}

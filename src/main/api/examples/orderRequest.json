@@ -1,0 +1,360 @@
+{
+  "orderPayload": {
+    "orderRequest": {
+      "Sender": {
+        "userName": "OPL",
+        "userID": "OPL",
+        "applicationName": "OPL"
+      },
+      "orderLines": [
+        {
+          "majorLine": {
+            "duoAccountID": "3232-6869-14",
+            "offerUnitNetPrice": 0,
+            "deliveryMethod": "CLOUD",
+            "itemCategory": "XaaS",
+            "billingModel": "Prepaid Term",
+            "ccwOrderLineId": 165806603,
+            "lineId": 2002513606,
+            "offerQuantity": 1,
+            "mrr": 496,
+            "sellType": "NOCHANGE",
+            "partName": "DUO-SUB",
+            "requestedStartDate": "2019-05-23T00:00:00.000-07:00",
+            "requestedEndDate": null,
+            "LineStatus": "BOOKED",
+            "subscriptionMasterId": "Sub251450",
+            "pricingInfo": {
+              "extListPrice": 0,
+              "extNetPrice": 0,
+              "unitListPrice": 0,
+              "unitNetPrice": 0,
+              "roundedUnitNetPrice": 0,
+              "discountAttr": [
+                {
+                  "creditEndDate": null,
+                  "unit": 45.5,
+                  "amount": 0,
+                  "creditCode": null,
+                  "monthlySubscriptionCredit": null,
+                  "modifierName": "PP-Technology-USD",
+                  "type": "Percentage",
+                  "applicableAtRenewal": null,
+                  "creditType": null,
+                  "group": "Promotion"
+                },
+                {
+                  "creditEndDate": null,
+                  "unit": 42,
+                  "amount": 0,
+                  "creditCode": null,
+                  "monthlySubscriptionCredit": null,
+                  "modifierName": "Core Category - Multinational Certified Partner - USD",
+                  "type": "Percentage",
+                  "applicableAtRenewal": null,
+                  "creditType": null,
+                  "group": "Standard"
+                }
+              ],
+              "pricingTerm": null
+            },
+            "renewalTerm": 12,
+            "actionType": 0,
+            "initialTerm": 12,
+            "prepayTerm": 12,
+            "provisionRequired": null,
+            "serviceProvisioningId": null,
+            "actionSubType": 0,
+            "provReferenceId": {
+              "id": null
+            },
+            "partyAccounts": [
+              {
+                "crPartyId": 187886963,
+                "address": {
+                  "address3": null,
+                  "province": "CA",
+                  "cityName": "FREMONT",
+                  "address2": null,
+                  "stateName": "CA",
+                  "address1": "6120 STEWART AVE",
+                  "countryCode": "US",
+                  "postalCode": 94538,
+                  "county": null
+                },
+                "custAccsiteId": 1025247983,
+                "type": "END_CUSTOMER",
+                "pgtmvBeCountryId": 19220,
+                "pgtmvBeGeoSiteId": 328923751,
+                "locationId": 1025722014,
+                "name": "GOOGLE INC",
+                "pgtmvBeGeoId": 90661181,
+                "custAccountId": 1111048,
+                "channelId": "Unknown",
+                "contacts" : [
+                  {
+                    "firstName": "TEST",
+                    "lastName": "TEST",
+                    "phoneNumber": 352352525,
+                    "contactId": 1014560672,
+                    "contactType": "Primary Business",
+                    "middleName": "TEST",
+                    "emailId": "Email@test.com"
+                  }
+                ],
+                "pgtmvBeId": 90654878
+              },
+              {
+                "crPartyId": 231412568,
+                "address": {
+                  "address3": null,
+                  "province": "CA",
+                  "cityName": "FSAN JOSE",
+                  "address2": "SJC09",
+                  "stateName": "CA",
+                  "address1": "260 E TASMAN DR",
+                  "countryCode": "US",
+                  "postalCode": "95134-1400"
+                },
+                "custAccsiteId": 1019552337,
+                "type": "SHIP_TO",
+                "pgtmvBeCountryId": 19220,
+                "pgtmvBeGeoSiteId": 328923751,
+                "locationId": 1019964421,
+                "name": "GOOGLE",
+                "pgtmvBeGeoId": 90661181,
+                "custAccountId": 130081275,
+                "channelId": "Unknown",
+                "contacts": [
+                  {
+                    "firstName": "TEST",
+                    "lastName": "TEST",
+                    "phoneNumber": 352352525,
+                    "contactId": 1014560672,
+                    "contactType": "Primary Business",
+                    "middleName": "TEST",
+                    "emailId": "Email@test.com"
+                  }
+                ],
+                "pgtmvBeId": 90661128
+              }
+            ]
+          },
+          "minorLines": [
+            {
+              "prePayTermTo": 60,
+              "quantity": 200,
+              "itemCategory": "Billing",
+              "chargeType": "Recurring",
+              "priceListVersion": 1,
+              "ccwOrderLineId": 165806604,
+              "lineId": 2002513607,
+              "topModelLineId": 2002513606,
+              "usageQuantity": 0,
+              "initialTermTo": 36,
+              "netPriceChangeFlag": "N",
+              "typeOfQuantity": "User",
+              "partName": "DUO-MFAU",
+              "pricingInfo": {
+                "maxUnitSalePrice": 99999999,
+                "extListPrice": 7200,
+                "extNetPrice": 912,
+                "unitListPrice": 3,
+                "unitNetPrice": 0.375,
+                "roundedUnitNetPrice": 0.38,
+                "discountAttr": [
+                  {
+                    "creditEndDate": null,
+                    "unit": 45.5,
+                    "amount": 274,
+                    "creditCode": null,
+                    "monthlySubscriptionCredit": null,
+                    "modifierName": "PP-Technology-USD",
+                    "type": "Percentage",
+                    "applicableAtRenewal": null,
+                    "creditType": null,
+                    "group": "Promotion"
+                  },
+                  {
+                    "creditEndDate": null,
+                    "unit": 42,
+                    "amount": 252,
+                    "creditCode": null,
+                    "monthlySubscriptionCredit": null,
+                    "modifierName": "Core Category - Multinational Certified Partner - USD",
+                    "type": "Percentage",
+                    "applicableAtRenewal": null,
+                    "creditType": null,
+                    "group": "Standard"
+                  }
+                ],
+                "pricingTerm": 1
+              },
+              "actionType": 0,
+              "pricingQtyTo": 99999999
+            },
+            {
+              "prePayTermTo": 60,
+              "quantity": 100,
+              "itemCategory": "Billing",
+              "chargeType": "Recurring",
+              "priceListVersion": 1,
+              "ccwOrderLineId": 165806605,
+              "lineId": 2002513608,
+              "topModelLineId": 2002513606,
+              "usageQuantity": 0,
+              "initialTermTo": 36,
+              "netPriceChangeFlag": "N",
+              "typeOfQuantity": "User",
+              "partName": "DUO-TLPHNY",
+              "pricingInfo": {
+                "maxUnitSalePrice": 99999999,
+                "extListPrice": 7200,
+                "extNetPrice": 5040,
+                "unitListPrice": 6,
+                "unitNetPrice": 4.2,
+                "roundedUnitNetPrice": 4.2,
+                "discountAttr": [
+                  {
+                    "creditEndDate": null,
+                    "unit": 30,
+                    "amount": 180,
+                    "creditCode": null,
+                    "monthlySubscriptionCredit": null,
+                    "modifierName": "Non Standard Discount - USD",
+                    "type": "Percentage",
+                    "applicableAtRenewal": null,
+                    "creditType": null,
+                    "group": "NonStandard"
+                  }
+                ],
+                "pricingTerm": 1
+              },
+              "actionType": 0,
+              "pricingQtyTo": 99999999
+            },
+            {
+              "prePayTermTo": null,
+              "quantity": 1,
+              "itemCategory": "Billing",
+              "chargeType": "Recurring",
+              "priceListVersion": 1,
+              "ccwOrderLineId": 165806606,
+              "lineId": 2002513609,
+              "topModelLineId": 2002513606,
+              "usageQuantity": 0,
+              "initialTermTo": null,
+              "netPriceChangeFlag": "N",
+              "typeOfQuantity": null,
+              "partName": "SVS-DUO-BASIC",
+              "pricingInfo": {
+                "maxUnitSalePrice": null,
+                "extListPrice": 0,
+                "extNetPrice": 0,
+                "unitListPrice": 0,
+                "unitNetPrice": 0,
+                "roundedUnitNetPrice": 0,
+                "discountAttr": [
+                  {
+                    "creditEndDate": null,
+                    "unit": 87.5,
+                    "amount": 0,
+                    "creditCode": null,
+                    "monthlySubscriptionCredit": null,
+                    "modifierName": "Adjusted Standard Discount - USD",
+                    "type": "Percentage",
+                    "applicableAtRenewal": null,
+                    "creditType": null,
+                    "group": "Standard"
+                  }
+                ],
+                "pricingTerm": 1
+              },
+              "actionType": 0,
+              "pricingQtyTo": null
+            }
+          ]
+        }
+      ],
+      "orderHeader": {
+        "federalFlag": "Y",
+        "operatingUnit": "CISCO US OPERATING UNIT",
+        "orderType": 0,
+        "dealId": 40452091,
+        "accountTypeCode": "1-Tier Partner",
+        "orderOrigin": "CCW-Q2O",
+        "webOrderId": 84829340,
+        "ciscoAmId": "gresimmo",
+        "taxability": "Resale",
+        "orgId": 161,
+        "hybridOrderFlag": "N",
+        "routeToMarket": "PARTNER",
+        "orderSubmitDate": "2019-05-23T10:56:38.000-07:00",
+        "intendedUse": "Resale",
+        "paymentMethod": "PO",
+        "priceListInfo": {
+          "priceListId": 1109,
+          "priceListName": "Global Price List US Availability"
+        },
+        "poNumber": 1234,
+        "currencyCode": "USD",
+        "conversionRate": 1,
+        "partyAccounts": [
+          {
+            "crPartyId": 328923751,
+            "address": {
+              "county": "null",
+              "address3": null,
+              "province": null,
+              "cityName": "MAYFIELD HEIGHTS",
+              "address2": null,
+              "stateName": "OH",
+              "address1": "5900 LANDERBROOK DR. SUITE 100",
+              "countryCode": "US",
+              "postalCode": 44124
+            },
+            "custAccsiteId": 1020726899,
+            "type": "BILL_TO",
+            "pgtmvBeCountryId": 19220,
+            "pgtmvBeGeoSiteId": 328923751,
+            "locationId": 1021120495,
+            "name": "CBTS",
+            "pgtmvBeGeoId": 90661181,
+            "custAccountId": 1019187512,
+            "channelId": "Unknown",
+            "contacts": [
+              {
+                "firstName": "DAWN",
+                "lastName": "WARD",
+                "phoneNumber": "440-569-2317",
+                "contactId": 1013917992,
+                "contactType": "Primary Support",
+                "middleName": "WARD",
+                "emailId": "nobody@cisco.com"
+              },
+              {
+                "firstName": "DEBBIE",
+                "lastName": "EAGLE",
+                "phoneNumber": "440-569-2367",
+                "contactId": 1014138657,
+                "contactType": "Primary Business",
+                "middleName": "EAGLE",
+                "emailId": "nobody@cisco.com"
+              },
+              {
+                "firstName": "DEBBIE",
+                "lastName": "EAGLE",
+                "phoneNumber": "440-569-2367",
+                "contactId": 1014138657,
+                "contactType": "Primary Billing",
+                "middleName": "EAGLE",
+                "emailId": "nobody@cisco.com"
+              }
+            ],
+            "pgtmvBeId": 90661128
+          }
+        ]
+      }
+    }
+  }
+}

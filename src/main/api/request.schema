@@ -1,0 +1,1360 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "orderPayload": {
+      "type": "object",
+      "properties": {
+        "orderRequest": {
+          "type": "object",
+          "properties": {
+            "Sender": {
+              "type": "object",
+              "properties": {
+                "userName": {
+                  "type": "string"
+                },
+                "userID": {
+                  "type": "string"
+                },
+                "applicationName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "userName",
+                "userID",
+                "applicationName"
+              ]
+            },
+            "orderLines": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "majorLine": {
+                      "type": "object",
+                      "properties": {
+                        "offerUnitNetPrice": {
+                          "type": "integer"
+                        },
+                        "deliveryMethod": {
+                          "type": "string"
+                        },
+                        "itemCategory": {
+                          "type": "string"
+                        },
+                        "billingModel": {
+                          "type": "string"
+                        },
+                        "ccwOrderLineId": {
+                          "type": "integer"
+                        },
+                        "offerQuantity": {
+                          "type": "integer"
+                        },
+                        "mrr": {
+                          "type": "integer"
+                        },
+                        "sellType": {
+                          "type": "string"
+                        },
+                        "partName": {
+                          "type": "string"
+                        },
+                        "requestedStartDate": {
+                          "type": "string"
+                        },
+                        "LineStatus": {
+                          "type": "string"
+                        },
+                        "subscriptionMasterId": {
+                          "type": "string"
+                        },
+                        "pricingInfo": {
+                          "type": "object",
+                          "properties": {
+                            "extListPrice": {
+                              "type": "integer"
+                            },
+                            "extNetPrice": {
+                              "type": "integer"
+                            },
+                            "unitListPrice": {
+                              "type": "integer"
+                            },
+                            "unitNetPrice": {
+                              "type": "integer"
+                            },
+                            "roundedUnitNetPrice": {
+                              "type": "integer"
+                            },
+                            "discountAttr": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "creditEndDate": {
+                                      "type": "null"
+                                    },
+                                    "unit": {
+                                      "type": "number"
+                                    },
+                                    "amount": {
+                                      "type": "integer"
+                                    },
+                                    "creditCode": {
+                                      "type": "null"
+                                    },
+                                    "monthlySubscriptionCredit": {
+                                      "type": "null"
+                                    },
+                                    "modifierName": {
+                                      "type": "string"
+                                    },
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "applicableAtRenewal": {
+                                      "type": "null"
+                                    },
+                                    "creditType": {
+                                      "type": "null"
+                                    },
+                                    "group": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "creditEndDate",
+                                    "unit",
+                                    "amount",
+                                    "creditCode",
+                                    "monthlySubscriptionCredit",
+                                    "modifierName",
+                                    "type",
+                                    "applicableAtRenewal",
+                                    "creditType",
+                                    "group"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "creditEndDate": {
+                                      "type": "null"
+                                    },
+                                    "unit": {
+                                      "type": "integer"
+                                    },
+                                    "amount": {
+                                      "type": "integer"
+                                    },
+                                    "creditCode": {
+                                      "type": "null"
+                                    },
+                                    "monthlySubscriptionCredit": {
+                                      "type": "null"
+                                    },
+                                    "modifierName": {
+                                      "type": "string"
+                                    },
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "applicableAtRenewal": {
+                                      "type": "null"
+                                    },
+                                    "creditType": {
+                                      "type": "null"
+                                    },
+                                    "group": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "creditEndDate",
+                                    "unit",
+                                    "amount",
+                                    "creditCode",
+                                    "monthlySubscriptionCredit",
+                                    "modifierName",
+                                    "type",
+                                    "applicableAtRenewal",
+                                    "creditType",
+                                    "group"
+                                  ]
+                                }
+                              ]
+                            },
+                            "pricingTerm": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "extListPrice",
+                            "extNetPrice",
+                            "unitListPrice",
+                            "unitNetPrice",
+                            "roundedUnitNetPrice",
+                            "discountAttr",
+                            "pricingTerm"
+                          ]
+                        },
+                        "renewalTerm": {
+                          "type": "integer"
+                        },
+                        "actionType": {
+                          "type": "integer"
+                        },
+                        "initialTerm": {
+                          "type": "integer"
+                        },
+                        "prepayTerm": {
+                          "type": "integer"
+                        },
+                        "provisionRequired": {
+                          "type": "null"
+                        },
+                        "serviceProvisioningId": {
+                          "type": "null"
+                        },
+                        "requestedEndDate": {
+                          "type": "null"
+                        },
+                        "actionSubType": {
+                          "type": "integer"
+                        },
+                        "provReferenceId": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "id"
+                          ]
+                        },
+                        "partyAccounts": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "crPartyId": {
+                                  "type": "integer"
+                                },
+                                "address": {
+                                  "type": "object",
+                                  "properties": {
+                                    "address3": {
+                                      "type": "null"
+                                    },
+                                    "province": {
+                                      "type": "string"
+                                    },
+                                    "cityName": {
+                                      "type": "string"
+                                    },
+                                    "address2": {
+                                      "type": "null"
+                                    },
+                                    "stateName": {
+                                      "type": "string"
+                                    },
+                                    "address1": {
+                                      "type": "string"
+                                    },
+                                    "countryCode": {
+                                      "type": "string"
+                                    },
+                                    "postalCode": {
+                                      "type": "integer"
+                                    },
+                                    "county": {
+                                      "type": "null"
+                                    }
+                                  },
+                                  "required": [
+                                    "address3",
+                                    "province",
+                                    "cityName",
+                                    "address2",
+                                    "stateName",
+                                    "address1",
+                                    "countryCode",
+                                    "postalCode",
+                                    "county"
+                                  ]
+                                },
+                                "custAccsiteId": {
+                                  "type": "integer"
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "pgtmvBeCountryId": {
+                                  "type": "integer"
+                                },
+                                "pgtmvBeGeoSiteId": {
+                                  "type": "integer"
+                                },
+                                "locationId": {
+                                  "type": "integer"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "pgtmvBeGeoId": {
+                                  "type": "integer"
+                                },
+                                "custAccountId": {
+                                  "type": "integer"
+                                },
+                                "channelId": {
+                                  "type": "string"
+                                },
+                                "contacts": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "firstName": {
+                                          "type": "string"
+                                        },
+                                        "lastName": {
+                                          "type": "string"
+                                        },
+                                        "phoneNumber": {
+                                          "type": "integer"
+                                        },
+                                        "contactId": {
+                                          "type": "integer"
+                                        },
+                                        "contactType": {
+                                          "type": "string"
+                                        },
+                                        "middleName": {
+                                          "type": "string"
+                                        },
+                                        "emailId": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "firstName",
+                                        "lastName",
+                                        "phoneNumber",
+                                        "contactId",
+                                        "contactType",
+                                        "middleName",
+                                        "emailId"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "pgtmvBeId": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "crPartyId",
+                                "address",
+                                "custAccsiteId",
+                                "type",
+                                "pgtmvBeCountryId",
+                                "pgtmvBeGeoSiteId",
+                                "locationId",
+                                "name",
+                                "pgtmvBeGeoId",
+                                "custAccountId",
+                                "channelId",
+                                "contacts",
+                                "pgtmvBeId"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "crPartyId": {
+                                  "type": "integer"
+                                },
+                                "address": {
+                                  "type": "object",
+                                  "properties": {
+                                    "address3": {
+                                      "type": "null"
+                                    },
+                                    "province": {
+                                      "type": "string"
+                                    },
+                                    "cityName": {
+                                      "type": "string"
+                                    },
+                                    "address2": {
+                                      "type": "string"
+                                    },
+                                    "stateName": {
+                                      "type": "string"
+                                    },
+                                    "address1": {
+                                      "type": "string"
+                                    },
+                                    "countryCode": {
+                                      "type": "string"
+                                    },
+                                    "postalCode": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "address3",
+                                    "province",
+                                    "cityName",
+                                    "address2",
+                                    "stateName",
+                                    "address1",
+                                    "countryCode",
+                                    "postalCode"
+                                  ]
+                                },
+                                "custAccsiteId": {
+                                  "type": "integer"
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "pgtmvBeCountryId": {
+                                  "type": "integer"
+                                },
+                                "pgtmvBeGeoSiteId": {
+                                  "type": "integer"
+                                },
+                                "locationId": {
+                                  "type": "integer"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "pgtmvBeGeoId": {
+                                  "type": "integer"
+                                },
+                                "custAccountId": {
+                                  "type": "integer"
+                                },
+                                "channelId": {
+                                  "type": "string"
+                                },
+                                "contacts": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "firstName": {
+                                          "type": "string"
+                                        },
+                                        "lastName": {
+                                          "type": "string"
+                                        },
+                                        "phoneNumber": {
+                                          "type": "integer"
+                                        },
+                                        "contactId": {
+                                          "type": "integer"
+                                        },
+                                        "contactType": {
+                                          "type": "string"
+                                        },
+                                        "middleName": {
+                                          "type": "string"
+                                        },
+                                        "emailId": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "firstName",
+                                        "lastName",
+                                        "phoneNumber",
+                                        "contactId",
+                                        "contactType",
+                                        "middleName",
+                                        "emailId"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "pgtmvBeId": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "crPartyId",
+                                "address",
+                                "custAccsiteId",
+                                "type",
+                                "pgtmvBeCountryId",
+                                "pgtmvBeGeoSiteId",
+                                "locationId",
+                                "name",
+                                "pgtmvBeGeoId",
+                                "custAccountId",
+                                "channelId",
+                                "contacts",
+                                "pgtmvBeId"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "offerUnitNetPrice",
+                        "deliveryMethod",
+                        "itemCategory",
+                        "billingModel",
+                        "ccwOrderLineId",
+                        "offerQuantity",
+                        "mrr",
+                        "sellType",
+                        "partName",
+                        "requestedStartDate",
+                        "LineStatus",
+                        "subscriptionMasterId",
+                        "pricingInfo",
+                        "renewalTerm",
+                        "actionType",
+                        "initialTerm",
+                        "prepayTerm",
+                        "provisionRequired",
+                        "serviceProvisioningId",
+                        "requestedEndDate",
+                        "actionSubType",
+                        "provReferenceId",
+                        "partyAccounts"
+                      ]
+                    },
+                    "minorLines": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "prePayTermTo": {
+                              "type": "integer"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            },
+                            "itemCategory": {
+                              "type": "string"
+                            },
+                            "chargeType": {
+                              "type": "string"
+                            },
+                            "priceListVersion": {
+                              "type": "integer"
+                            },
+                            "ccwOrderLineId": {
+                              "type": "integer"
+                            },
+                            "usageQuantity": {
+                              "type": "integer"
+                            },
+                            "initialTermTo": {
+                              "type": "integer"
+                            },
+                            "netPriceChangeFlag": {
+                              "type": "string"
+                            },
+                            "typeOfQuantity": {
+                              "type": "string"
+                            },
+                            "partName": {
+                              "type": "string"
+                            },
+                            "pricingInfo": {
+                              "type": "object",
+                              "properties": {
+                                "maxUnitSalePrice": {
+                                  "type": "integer"
+                                },
+                                "extListPrice": {
+                                  "type": "integer"
+                                },
+                                "extNetPrice": {
+                                  "type": "integer"
+                                },
+                                "unitListPrice": {
+                                  "type": "integer"
+                                },
+                                "unitNetPrice": {
+                                  "type": "number"
+                                },
+                                "roundedUnitNetPrice": {
+                                  "type": "number"
+                                },
+                                "discountAttr": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "creditEndDate": {
+                                          "type": "null"
+                                        },
+                                        "unit": {
+                                          "type": "number"
+                                        },
+                                        "amount": {
+                                          "type": "integer"
+                                        },
+                                        "creditCode": {
+                                          "type": "null"
+                                        },
+                                        "monthlySubscriptionCredit": {
+                                          "type": "null"
+                                        },
+                                        "modifierName": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "applicableAtRenewal": {
+                                          "type": "null"
+                                        },
+                                        "creditType": {
+                                          "type": "null"
+                                        },
+                                        "group": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "creditEndDate",
+                                        "unit",
+                                        "amount",
+                                        "creditCode",
+                                        "monthlySubscriptionCredit",
+                                        "modifierName",
+                                        "type",
+                                        "applicableAtRenewal",
+                                        "creditType",
+                                        "group"
+                                      ]
+                                    },
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "creditEndDate": {
+                                          "type": "null"
+                                        },
+                                        "unit": {
+                                          "type": "integer"
+                                        },
+                                        "amount": {
+                                          "type": "integer"
+                                        },
+                                        "creditCode": {
+                                          "type": "null"
+                                        },
+                                        "monthlySubscriptionCredit": {
+                                          "type": "null"
+                                        },
+                                        "modifierName": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "applicableAtRenewal": {
+                                          "type": "null"
+                                        },
+                                        "creditType": {
+                                          "type": "null"
+                                        },
+                                        "group": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "creditEndDate",
+                                        "unit",
+                                        "amount",
+                                        "creditCode",
+                                        "monthlySubscriptionCredit",
+                                        "modifierName",
+                                        "type",
+                                        "applicableAtRenewal",
+                                        "creditType",
+                                        "group"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "pricingTerm": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "maxUnitSalePrice",
+                                "extListPrice",
+                                "extNetPrice",
+                                "unitListPrice",
+                                "unitNetPrice",
+                                "roundedUnitNetPrice",
+                                "discountAttr",
+                                "pricingTerm"
+                              ]
+                            },
+                            "actionType": {
+                              "type": "integer"
+                            },
+                            "pricingQtyTo": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "prePayTermTo",
+                            "quantity",
+                            "itemCategory",
+                            "chargeType",
+                            "priceListVersion",
+                            "ccwOrderLineId",
+                            "usageQuantity",
+                            "initialTermTo",
+                            "netPriceChangeFlag",
+                            "typeOfQuantity",
+                            "partName",
+                            "pricingInfo",
+                            "actionType",
+                            "pricingQtyTo"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "prePayTermTo": {
+                              "type": "integer"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            },
+                            "itemCategory": {
+                              "type": "string"
+                            },
+                            "chargeType": {
+                              "type": "string"
+                            },
+                            "priceListVersion": {
+                              "type": "integer"
+                            },
+                            "ccwOrderLineId": {
+                              "type": "integer"
+                            },
+                            "usageQuantity": {
+                              "type": "integer"
+                            },
+                            "initialTermTo": {
+                              "type": "integer"
+                            },
+                            "netPriceChangeFlag": {
+                              "type": "string"
+                            },
+                            "typeOfQuantity": {
+                              "type": "string"
+                            },
+                            "partName": {
+                              "type": "string"
+                            },
+                            "pricingInfo": {
+                              "type": "object",
+                              "properties": {
+                                "maxUnitSalePrice": {
+                                  "type": "integer"
+                                },
+                                "extListPrice": {
+                                  "type": "integer"
+                                },
+                                "extNetPrice": {
+                                  "type": "integer"
+                                },
+                                "unitListPrice": {
+                                  "type": "integer"
+                                },
+                                "unitNetPrice": {
+                                  "type": "number"
+                                },
+                                "roundedUnitNetPrice": {
+                                  "type": "number"
+                                },
+                                "discountAttr": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "creditEndDate": {
+                                          "type": "null"
+                                        },
+                                        "unit": {
+                                          "type": "integer"
+                                        },
+                                        "amount": {
+                                          "type": "integer"
+                                        },
+                                        "creditCode": {
+                                          "type": "null"
+                                        },
+                                        "monthlySubscriptionCredit": {
+                                          "type": "null"
+                                        },
+                                        "modifierName": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "applicableAtRenewal": {
+                                          "type": "null"
+                                        },
+                                        "creditType": {
+                                          "type": "null"
+                                        },
+                                        "group": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "creditEndDate",
+                                        "unit",
+                                        "amount",
+                                        "creditCode",
+                                        "monthlySubscriptionCredit",
+                                        "modifierName",
+                                        "type",
+                                        "applicableAtRenewal",
+                                        "creditType",
+                                        "group"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "pricingTerm": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "maxUnitSalePrice",
+                                "extListPrice",
+                                "extNetPrice",
+                                "unitListPrice",
+                                "unitNetPrice",
+                                "roundedUnitNetPrice",
+                                "discountAttr",
+                                "pricingTerm"
+                              ]
+                            },
+                            "actionType": {
+                              "type": "integer"
+                            },
+                            "pricingQtyTo": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "prePayTermTo",
+                            "quantity",
+                            "itemCategory",
+                            "chargeType",
+                            "priceListVersion",
+                            "ccwOrderLineId",
+                            "usageQuantity",
+                            "initialTermTo",
+                            "netPriceChangeFlag",
+                            "typeOfQuantity",
+                            "partName",
+                            "pricingInfo",
+                            "actionType",
+                            "pricingQtyTo"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "prePayTermTo": {
+                              "type": "null"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            },
+                            "itemCategory": {
+                              "type": "string"
+                            },
+                            "chargeType": {
+                              "type": "string"
+                            },
+                            "priceListVersion": {
+                              "type": "integer"
+                            },
+                            "ccwOrderLineId": {
+                              "type": "integer"
+                            },
+                            "usageQuantity": {
+                              "type": "integer"
+                            },
+                            "initialTermTo": {
+                              "type": "null"
+                            },
+                            "netPriceChangeFlag": {
+                              "type": "string"
+                            },
+                            "typeOfQuantity": {
+                              "type": "null"
+                            },
+                            "partName": {
+                              "type": "string"
+                            },
+                            "pricingInfo": {
+                              "type": "object",
+                              "properties": {
+                                "maxUnitSalePrice": {
+                                  "type": "null"
+                                },
+                                "extListPrice": {
+                                  "type": "integer"
+                                },
+                                "extNetPrice": {
+                                  "type": "integer"
+                                },
+                                "unitListPrice": {
+                                  "type": "integer"
+                                },
+                                "unitNetPrice": {
+                                  "type": "integer"
+                                },
+                                "roundedUnitNetPrice": {
+                                  "type": "integer"
+                                },
+                                "discountAttr": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "creditEndDate": {
+                                          "type": "null"
+                                        },
+                                        "unit": {
+                                          "type": "number"
+                                        },
+                                        "amount": {
+                                          "type": "integer"
+                                        },
+                                        "creditCode": {
+                                          "type": "null"
+                                        },
+                                        "monthlySubscriptionCredit": {
+                                          "type": "null"
+                                        },
+                                        "modifierName": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "applicableAtRenewal": {
+                                          "type": "null"
+                                        },
+                                        "creditType": {
+                                          "type": "null"
+                                        },
+                                        "group": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "creditEndDate",
+                                        "unit",
+                                        "amount",
+                                        "creditCode",
+                                        "monthlySubscriptionCredit",
+                                        "modifierName",
+                                        "type",
+                                        "applicableAtRenewal",
+                                        "creditType",
+                                        "group"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "pricingTerm": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "maxUnitSalePrice",
+                                "extListPrice",
+                                "extNetPrice",
+                                "unitListPrice",
+                                "unitNetPrice",
+                                "roundedUnitNetPrice",
+                                "discountAttr",
+                                "pricingTerm"
+                              ]
+                            },
+                            "actionType": {
+                              "type": "integer"
+                            },
+                            "pricingQtyTo": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "prePayTermTo",
+                            "quantity",
+                            "itemCategory",
+                            "chargeType",
+                            "priceListVersion",
+                            "ccwOrderLineId",
+                            "usageQuantity",
+                            "initialTermTo",
+                            "netPriceChangeFlag",
+                            "typeOfQuantity",
+                            "partName",
+                            "pricingInfo",
+                            "actionType",
+                            "pricingQtyTo"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "majorLine",
+                    "minorLines"
+                  ]
+                }
+              ]
+            },
+            "orderHeader": {
+              "type": "object",
+              "properties": {
+                "operatingUnit": {
+                  "type": "string"
+                },
+                "orderType": {
+                  "type": "integer"
+                },
+                "dealId": {
+                  "type": "integer"
+                },
+                "accountTypeCode": {
+                  "type": "string"
+                },
+                "orderOrigin": {
+                  "type": "string"
+                },
+                "webOrderId": {
+                  "type": "integer"
+                },
+                "ciscoAmId": {
+                  "type": "string"
+                },
+                "taxability": {
+                  "type": "string"
+                },
+                "orgId": {
+                  "type": "integer"
+                },
+                "hybridOrderFlag": {
+                  "type": "string"
+                },
+                "routeToMarket": {
+                  "type": "string"
+                },
+                "orderSubmitDate": {
+                  "type": "string"
+                },
+                "intendedUse": {
+                  "type": "string"
+                },
+                "paymentMethod": {
+                  "type": "string"
+                },
+                "priceListInfo": {
+                  "type": "object",
+                  "properties": {
+                    "priceListId": {
+                      "type": "integer"
+                    },
+                    "priceListName": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "priceListId",
+                    "priceListName"
+                  ]
+                },
+                "poNumber": {
+                  "type": "integer"
+                },
+                "currencyCode": {
+                  "type": "string"
+                },
+                "partyAccounts": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "crPartyId": {
+                          "type": "integer"
+                        },
+                        "address": {
+                          "type": "object",
+                          "properties": {
+                            "county": {
+                              "type": "string"
+                            },
+                            "address3": {
+                              "type": "null"
+                            },
+                            "province": {
+                              "type": "null"
+                            },
+                            "cityName": {
+                              "type": "string"
+                            },
+                            "address2": {
+                              "type": "null"
+                            },
+                            "stateName": {
+                              "type": "string"
+                            },
+                            "address1": {
+                              "type": "string"
+                            },
+                            "countryCode": {
+                              "type": "string"
+                            },
+                            "postalCode": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "county",
+                            "address3",
+                            "province",
+                            "cityName",
+                            "address2",
+                            "stateName",
+                            "address1",
+                            "countryCode",
+                            "postalCode"
+                          ]
+                        },
+                        "custAccsiteId": {
+                          "type": "integer"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "pgtmvBeCountryId": {
+                          "type": "integer"
+                        },
+                        "pgtmvBeGeoSiteId": {
+                          "type": "integer"
+                        },
+                        "locationId": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "pgtmvBeGeoId": {
+                          "type": "integer"
+                        },
+                        "custAccountId": {
+                          "type": "integer"
+                        },
+                        "channelId": {
+                          "type": "string"
+                        },
+                        "contacts": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "phoneNumber": {
+                                  "type": "string"
+                                },
+                                "contactId": {
+                                  "type": "integer"
+                                },
+                                "contactType": {
+                                  "type": "string"
+                                },
+                                "middleName": {
+                                  "type": "string"
+                                },
+                                "emailId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "phoneNumber",
+                                "contactId",
+                                "contactType",
+                                "middleName",
+                                "emailId"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "phoneNumber": {
+                                  "type": "string"
+                                },
+                                "contactId": {
+                                  "type": "integer"
+                                },
+                                "contactType": {
+                                  "type": "string"
+                                },
+                                "middleName": {
+                                  "type": "string"
+                                },
+                                "emailId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "phoneNumber",
+                                "contactId",
+                                "contactType",
+                                "middleName",
+                                "emailId"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "phoneNumber": {
+                                  "type": "string"
+                                },
+                                "contactId": {
+                                  "type": "integer"
+                                },
+                                "contactType": {
+                                  "type": "string"
+                                },
+                                "middleName": {
+                                  "type": "string"
+                                },
+                                "emailId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "phoneNumber",
+                                "contactId",
+                                "contactType",
+                                "middleName",
+                                "emailId"
+                              ]
+                            }
+                          ]
+                        },
+                        "pgtmvBeId": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "crPartyId",
+                        "address",
+                        "custAccsiteId",
+                        "type",
+                        "pgtmvBeCountryId",
+                        "pgtmvBeGeoSiteId",
+                        "locationId",
+                        "name",
+                        "pgtmvBeGeoId",
+                        "custAccountId",
+                        "channelId",
+                        "contacts",
+                        "pgtmvBeId"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "operatingUnit",
+                "orderType",
+                "dealId",
+                "accountTypeCode",
+                "orderOrigin",
+                "webOrderId",
+                "ciscoAmId",
+                "taxability",
+                "orgId",
+                "hybridOrderFlag",
+                "routeToMarket",
+                "orderSubmitDate",
+                "intendedUse",
+                "paymentMethod",
+                "priceListInfo",
+                "poNumber",
+                "currencyCode",
+                "partyAccounts"
+              ]
+            }
+          },
+          "required": [
+            "Sender",
+            "orderLines",
+            "orderHeader"
+          ]
+        }
+      },
+      "required": [
+        "orderRequest"
+      ]
+    }
+  },
+  "required": [
+    "orderPayload"
+  ]
+}

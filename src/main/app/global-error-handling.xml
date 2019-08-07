@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:secure-property-placeholder="http://www.mulesoft.org/schema/mule/secure-property-placeholder" xmlns:api-platform-gw="http://www.mulesoft.org/schema/mule/api-platform-gw"
+	xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+	xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/api-platform-gw http://www.mulesoft.org/schema/mule/api-platform-gw/current/mule-api-platform-gw.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/secure-property-placeholder http://www.mulesoft.org/schema/mule/secure-property-placeholder/current/mule-secure-property-placeholder.xsd">
+    <catch-exception-strategy name="globalCatch_Exception_Strategy1">
+        <logger message="exception occured" level="INFO" doc:name="Logger"/>
+        <set-variable variableName="errorMessage" value="#[org.mule.util.ExceptionUtils.getMessage(exception)]" doc:name="Variable"/>
+        <set-property propertyName="http.status" value="400" doc:name="Property"/>
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	errorMessage : flowVars.errorMessage
+}]]></dw:set-payload>
+        </dw:transform-message>
+    </catch-exception-strategy>
+
+<!--     <spring:beans> -->
+<!-- 		<spring:import resource="classpath:mgt-exp-orders-api.xml"/> -->
+<!-- 	</spring:beans> -->
+	
+<!--     <configuration defaultExceptionStrategy-ref="global-exception-strategy" doc:name="default_Exception_Strategy"/> -->
+
+    
+<!-- 	<http:request-config name="Identity-HTTPS_Request_Configuration"  -->
+<!-- 		protocol="HTTPS" host="#[sessionsVars.WCSBaseUrl]" port="443" doc:name="HTTPS Request Configuration" basePath="sys/qa6/v1" responseTimeout="60000" > -->
+<!--         <tls:context> -->
+<!--             <tls:trust-store path="testadvanceautocloudchain.jks" password="aapParts123" type="jks"/> -->
+<!--         </tls:context> -->
+<!--     </http:request-config> -->
+    
+<!--      <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration" protocol="HTTPS"> -->
+<!--         <tls:context> -->
+<!--             <tls:key-store type="jks" path="keystore.jks" keyPassword="password" password="password"/> -->
+<!--         </tls:context> -->
+<!--     </http:listener-config> -->
+<!--     <context:property-placeholder location="classpath:env/${mule.env}-app.properties"/> -->
+    
+    
+    <choice-exception-strategy  name="IdentityExceptionStrategy">
+	    <catch-exception-strategy when="#[exception.causedBy(org.mule.module.http.internal.request.ResponseValidatorException)]" doc:name="Catch Exception Strategy">
+	    	
+	    	<logger message=" FlowName=#[flow.name] - Exception Message=Response From WCS: #[message.payloadAs(java.lang.String)]" level="INFO" category="com.aap.b2c.wcs.identity" doc:name="Response"/>
+	    	
+	    	<choice doc:name="Choice">
+	        	<when expression="#[message.inboundProperties['http.status'] == 400]">
+	                
+	                <set-property propertyName="http.status" value="400" doc:name="Set Http Status"/>
+                    <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+	         </when>
+	         <when expression="#[message.inboundProperties['http.status'] == 401]">
+	             <set-variable variableName="errorMessage" value="Upstream service did not authorize the request." doc:name="Set Error Message"/>
+<!-- 	             <flow-ref name="global-not-authenticated-sub-flow" doc:name="global-not-authenticated-sub-flow"/> -->
+	         </when>
+	         <when expression="#[message.inboundProperties['http.status'] == 403]">
+	             <set-variable variableName="errorMessage" value="Access to the upstream service is forbidden." doc:name="Set Error Message"/>
+<!-- 	             <flow-ref name="global-unauthorized-response-sub-flow" doc:name="global-unauthorized-response-sub-flow"/> -->
+	         </when>
+	         <when expression="#[message.inboundProperties['http.status'] == 404]">
+	             <set-variable variableName="errorMessage" value="	The specified resource couldn't be found." doc:name="Set Error Message"/>
+<!-- 	             <flow-ref name="global-not-authenticated-sub-flow" doc:name="global-not-authenticated-sub-flow"/> -->
+	         </when>
+	         <when expression="#[message.inboundProperties['http.status'] == 406]">
+                    <set-property propertyName="http.status" value="406" doc:name="Set Http Status"/>
+                    <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+                </when>
+	         <when expression="#[message.inboundProperties['http.status'] &lt; 500]">
+	             <set-variable variableName="errorMessage" value="Upstream service unable to fulfil request." doc:name="Set Error Message"/>
+<!-- 	             <flow-ref name="global-internal-server-error-response-sub-flow" doc:name="global-internal-server-error-response-sub-flow"/>                     -->
+	         </when>
+	         <otherwise>
+                    <set-variable variableName="errorMessage" value="Upstream service internal error." doc:name="Set Error Message"/>
+<!-- 	             <flow-ref name="global-internal-server-error-response-sub-flow" doc:name="Bad Gateway Response"/>                 -->
+	         </otherwise>
+	     </choice>
+	    </catch-exception-strategy>
+	</choice-exception-strategy>
+	
+</mule>

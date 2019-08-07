@@ -1,0 +1,3479 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "applicationArea": {
+      "type": "object",
+      "properties": {
+        "internalTransactionId": {
+          "type": "string"
+        },
+        "task": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "taskName": {
+                  "type": "string"
+                },
+                "timeTaken": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "taskName",
+                "timeTaken"
+              ]
+            }
+          ]
+        },
+        "totalTime": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "internalTransactionId",
+        "task",
+        "totalTime"
+      ]
+    },
+    "responseStatus": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "errorCode": {
+              "type": "string"
+            },
+            "messageContent": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            },
+            "msg": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "errorCode",
+            "messageContent",
+            "severity",
+            "msg"
+          ]
+        }
+      ]
+    },
+    "dataArea": {
+      "type": "object",
+      "properties": {
+        "deal": {
+          "type": "object",
+          "properties": {
+            "updatedTimeStamp": {
+              "type": "string"
+            },
+            "identifySingleAMFlag": {
+              "type": "string"
+            },
+            "mdmDealStatus": {
+              "type": "integer"
+            },
+            "p360DealFlag": {
+              "type": "string"
+            },
+            "pdrOptyDescStrategicValue": {
+              "type": "string"
+            },
+            "pdrProdValue": {
+              "type": "integer"
+            },
+            "pdrServValue": {
+              "type": "integer"
+            },
+            "prodSalesPath": {
+              "type": "string"
+            },
+            "publishDiscountFlag": {
+              "type": "string"
+            },
+            "qfFormId": {
+              "type": "integer"
+            },
+            "rfpFlag": {
+              "type": "string"
+            },
+            "dealId": {
+              "type": "string"
+            },
+            "dealName": {
+              "type": "string"
+            },
+            "dealObjectId": {
+              "type": "integer"
+            },
+            "dealStatusDesc": {
+              "type": "string"
+            },
+            "activeWorkflow": {
+              "type": "string"
+            },
+            "dealExpBookDate": {
+              "type": "string"
+            },
+            "dealExpProductAmount": {
+              "type": "integer"
+            },
+            "dealExpServiceAmount": {
+              "type": "integer"
+            },
+            "dealTypeDesc": {
+              "type": "string"
+            },
+            "sfdcIntegration": {
+              "type": "boolean"
+            },
+            "dealScope": {
+              "type": "string"
+            },
+            "dealScopeId": {
+              "type": "integer"
+            },
+            "businessScenario": {
+              "type": "string"
+            },
+            "businessScenarioId": {
+              "type": "integer"
+            },
+            "createrDetail": {
+              "type": "object",
+              "properties": {
+                "ccoId": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "paeUserId": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "ccoId",
+                "role",
+                "paeUserId"
+              ]
+            },
+            "teamDetails": {
+              "type": "array",
+              "items": {}
+            },
+            "quotes": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "nsQuoteExtn": {
+                      "type": "object",
+                      "properties": {
+                        "productComp": {
+                          "type": "string"
+                        },
+                        "tssCoreComp": {
+                          "type": "string"
+                        },
+                        "asTransactionComp": {
+                          "type": "string"
+                        },
+                        "asSubscriptionComp": {
+                          "type": "string"
+                        },
+                        "rosComp": {
+                          "type": "string"
+                        },
+                        "asFixedComp": {
+                          "type": "string"
+                        },
+                        "prodNsFlag": {
+                          "type": "string"
+                        },
+                        "tssNsFlag": {
+                          "type": "string"
+                        },
+                        "astNsFlag": {
+                          "type": "string"
+                        },
+                        "assNsFlag": {
+                          "type": "string"
+                        },
+                        "rosNsFlag": {
+                          "type": "string"
+                        },
+                        "asfNsFlag": {
+                          "type": "string"
+                        },
+                        "xaasNsFlag": {
+                          "type": "string"
+                        },
+                        "xaasComp": {
+                          "type": "string"
+                        },
+                        "ddAlertFlag": {
+                          "type": "string"
+                        },
+                        "isSaDeal": {
+                          "type": "string"
+                        },
+                        "finishState": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "productComp",
+                        "tssCoreComp",
+                        "asTransactionComp",
+                        "asSubscriptionComp",
+                        "rosComp",
+                        "asFixedComp",
+                        "prodNsFlag",
+                        "tssNsFlag",
+                        "astNsFlag",
+                        "assNsFlag",
+                        "rosNsFlag",
+                        "asfNsFlag",
+                        "xaasNsFlag",
+                        "xaasComp",
+                        "ddAlertFlag",
+                        "isSaDeal",
+                        "finishState"
+                      ]
+                    },
+                    "isNsCreditExists": {
+                      "type": "string"
+                    },
+                    "updatedBy": {
+                      "type": "string"
+                    },
+                    "updatedTimeStamp": {
+                      "type": "string"
+                    },
+                    "updatedOn": {
+                      "type": "string"
+                    },
+                    "gdrFlag": {
+                      "type": "string"
+                    },
+                    "distiException": {
+                      "type": "integer"
+                    },
+                    "siteObjectId": {
+                      "type": "integer"
+                    },
+                    "atOrBelowFlag": {
+                      "type": "string"
+                    },
+                    "shipToCountry": {
+                      "type": "string"
+                    },
+                    "cbnSplitEligible": {
+                      "type": "string"
+                    },
+                    "isDistiQ2oEligible": {
+                      "type": "string"
+                    },
+                    "isDiscountPublished": {
+                      "type": "string"
+                    },
+                    "finishState": {
+                      "type": "integer"
+                    },
+                    "federalFlg": {
+                      "type": "string"
+                    },
+                    "fetchedWsTaaPref": {
+                      "type": "string"
+                    },
+                    "sdgCustomerTechSelectFlag": {
+                      "type": "string"
+                    },
+                    "isDiscGuidanceViewed": {
+                      "type": "string"
+                    },
+                    "gebCallRequired": {
+                      "type": "string"
+                    },
+                    "stdIncrFlag": {
+                      "type": "string"
+                    },
+                    "crpFlag": {
+                      "type": "string"
+                    },
+                    "rewardExpiryVariance": {
+                      "type": "integer"
+                    },
+                    "autoApprove": {
+                      "type": "string"
+                    },
+                    "oaStatus": {
+                      "type": "string"
+                    },
+                    "eaEligibleCheck": {
+                      "type": "string"
+                    },
+                    "quoteStatusDesc": {
+                      "type": "string"
+                    },
+                    "custOptInPreference": {
+                      "type": "string"
+                    },
+                    "createdBy": {
+                      "type": "string"
+                    },
+                    "billingAddress": {
+                      "type": "object",
+                      "properties": {
+                        "billingId": {
+                          "type": "string"
+                        },
+                        "customerName": {
+                          "type": "string"
+                        },
+                        "customerActSiteID": {
+                          "type": "integer"
+                        },
+                        "accountNumber": {
+                          "type": "string"
+                        },
+                        "partyId": {
+                          "type": "integer"
+                        },
+                        "custAccountId": {
+                          "type": "integer"
+                        },
+                        "address1": {
+                          "type": "string"
+                        },
+                        "address2": {
+                          "type": "string"
+                        },
+                        "address3": {
+                          "type": "null"
+                        },
+                        "address4": {
+                          "type": "null"
+                        },
+                        "country": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "postalCode": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "null"
+                        },
+                        "province": {
+                          "type": "null"
+                        },
+                        "county": {
+                          "type": "null"
+                        },
+                        "countryDesc": {
+                          "type": "null"
+                        },
+                        "address": {
+                          "type": "string"
+                        },
+                        "operatingUnit": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "billingId",
+                        "customerName",
+                        "customerActSiteID",
+                        "accountNumber",
+                        "partyId",
+                        "custAccountId",
+                        "address1",
+                        "address2",
+                        "address3",
+                        "address4",
+                        "country",
+                        "city",
+                        "postalCode",
+                        "state",
+                        "province",
+                        "county",
+                        "countryDesc",
+                        "address",
+                        "operatingUnit"
+                      ]
+                    },
+                    "cbnStatusDesc": {
+                      "type": "string"
+                    },
+                    "quoteContacts": {
+                      "type": "object",
+                      "properties": {
+                        "PARTNER": {
+                          "type": "object",
+                          "properties": {
+                            "contact": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "contactEmailId": {
+                                      "type": "string"
+                                    },
+                                    "contactFirstName": {
+                                      "type": "string"
+                                    },
+                                    "contactLastName": {
+                                      "type": "string"
+                                    },
+                                    "contactPhoneNumber": {
+                                      "type": "string"
+                                    },
+                                    "primaryFlag": {
+                                      "type": "string"
+                                    },
+                                    "contactCCOId": {
+                                      "type": "string"
+                                    },
+                                    "contactPaeUserId": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "contactEmailId",
+                                    "contactFirstName",
+                                    "contactLastName",
+                                    "contactPhoneNumber",
+                                    "primaryFlag",
+                                    "contactCCOId",
+                                    "contactPaeUserId"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "contact"
+                          ]
+                        },
+                        "ENDCUSTOMER": {
+                          "type": "object",
+                          "properties": {
+                            "contact": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "contactEmailId": {
+                                      "type": "string"
+                                    },
+                                    "contactFirstName": {
+                                      "type": "string"
+                                    },
+                                    "contactLastName": {
+                                      "type": "string"
+                                    },
+                                    "contactPhoneNumber": {
+                                      "type": "string"
+                                    },
+                                    "primaryFlag": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "contactEmailId",
+                                    "contactFirstName",
+                                    "contactLastName",
+                                    "contactPhoneNumber",
+                                    "primaryFlag"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "contact"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "PARTNER",
+                        "ENDCUSTOMER"
+                      ]
+                    },
+                    "intendedUseDesc": {
+                      "type": "string"
+                    },
+                    "quoteCategoryDesc": {
+                      "type": "string"
+                    },
+                    "fulfillementType": {
+                      "type": "string"
+                    },
+                    "priceListInfo": {
+                      "type": "object",
+                      "properties": {
+                        "priceListName": {
+                          "type": "string"
+                        },
+                        "erpPriceListId": {
+                          "type": "integer"
+                        },
+                        "priceListId": {
+                          "type": "integer"
+                        },
+                        "currencyCode": {
+                          "type": "string"
+                        },
+                        "shortDesc": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "priceListName",
+                        "erpPriceListId",
+                        "priceListId",
+                        "currencyCode",
+                        "shortDesc"
+                      ]
+                    },
+                    "pgtmvPartnerBeGeoId": {
+                      "type": "integer"
+                    },
+                    "netPriceProtectionDate": {
+                      "type": "string"
+                    },
+                    "incentives": {
+                      "type": "string"
+                    },
+                    "majorLineList": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "childLines": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "active": {
+                                      "type": "integer"
+                                    },
+                                    "additionalItemInfo": {
+                                      "type": "string"
+                                    },
+                                    "additionalUnitCreditAmt": {
+                                      "type": "integer"
+                                    },
+                                    "attributionMethodology": {
+                                      "type": "string"
+                                    },
+                                    "attributionRequired": {
+                                      "type": "string"
+                                    },
+                                    "ciscoFulfillmentId": {
+                                      "type": "integer"
+                                    },
+                                    "configPath": {
+                                      "type": "string"
+                                    },
+                                    "configVerifiedOn": {
+                                      "type": "string"
+                                    },
+                                    "configurableFlag": {
+                                      "type": "string"
+                                    },
+                                    "constructType": {
+                                      "type": "string"
+                                    },
+                                    "contractualDisc": {
+                                      "type": "integer"
+                                    },
+                                    "createdBy": {
+                                      "type": "string"
+                                    },
+                                    "createdOn": {
+                                      "type": "string"
+                                    },
+                                    "decimalExpansionValue": {
+                                      "type": "integer"
+                                    },
+                                    "deferDartFlag": {
+                                      "type": "string"
+                                    },
+                                    "deliveryOption": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": "string"
+                                    },
+                                    "distyInvQtyDate": {
+                                      "type": "string"
+                                    },
+                                    "drpFlag": {
+                                      "type": "string"
+                                    },
+                                    "durationEndDate": {
+                                      "type": "string"
+                                    },
+                                    "durationStartDate": {
+                                      "type": "string"
+                                    },
+                                    "effectiveDiscStd": {
+                                      "type": "integer"
+                                    },
+                                    "endDateAlignEligibleFlag": {
+                                      "type": "string"
+                                    },
+                                    "eosDate": {
+                                      "type": "string"
+                                    },
+                                    "extListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPriceAmtExcludeMyd": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "finalNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "inventoryItemId": {
+                                      "type": "integer"
+                                    },
+                                    "isAdjustable": {
+                                      "type": "string"
+                                    },
+                                    "isDistiOnly": {
+                                      "type": "string"
+                                    },
+                                    "isLpsFetchedFrmLps": {
+                                      "type": "string"
+                                    },
+                                    "isSkuEolPriced": {
+                                      "type": "string"
+                                    },
+                                    "isTransactionELA": {
+                                      "type": "string"
+                                    },
+                                    "itemPath": {
+                                      "type": "string"
+                                    },
+                                    "itemType": {
+                                      "type": "string"
+                                    },
+                                    "lineNumber": {
+                                      "type": "string"
+                                    },
+                                    "lineOrigin": {
+                                      "type": "string"
+                                    },
+                                    "lineType": {
+                                      "type": "integer"
+                                    },
+                                    "unitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "maxAllowedDiscStd": {
+                                      "type": "integer"
+                                    },
+                                    "mlbIndicator": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedDiscNs": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedDiscount": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "nonStandardDisc": {
+                                      "type": "number"
+                                    },
+                                    "nphDate": {
+                                      "type": "string"
+                                    },
+                                    "objectId": {
+                                      "type": "integer"
+                                    },
+                                    "oemRebFlag": {
+                                      "type": "string"
+                                    },
+                                    "parentLineObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "partNumber": {
+                                      "type": "string"
+                                    },
+                                    "promoDisc": {
+                                      "type": "integer"
+                                    },
+                                    "quantity": {
+                                      "type": "integer"
+                                    },
+                                    "quoteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "refurbishedFlag": {
+                                      "type": "string"
+                                    },
+                                    "selectedPath": {
+                                      "type": "string"
+                                    },
+                                    "singleSkuLineType": {
+                                      "type": "integer"
+                                    },
+                                    "soaSubscriptionType": {
+                                      "type": "string"
+                                    },
+                                    "sourceObjectId": {
+                                      "type": "string"
+                                    },
+                                    "sourceType": {
+                                      "type": "integer"
+                                    },
+                                    "subscriptionCredit": {
+                                      "type": "integer"
+                                    },
+                                    "uiHide": {
+                                      "type": "string"
+                                    },
+                                    "velocityFlag": {
+                                      "type": "string"
+                                    },
+                                    "wfPriced": {
+                                      "type": "string"
+                                    },
+                                    "wplListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "updatedTimeStamp": {
+                                      "type": "string"
+                                    },
+                                    "updatedBy": {
+                                      "type": "string"
+                                    },
+                                    "updatedOn": {
+                                      "type": "string"
+                                    },
+                                    "monthlyCredit": {
+                                      "type": "number"
+                                    },
+                                    "pricingTerm": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQtyInclCredit": {
+                                      "type": "number"
+                                    },
+                                    "listPrice": {
+                                      "type": "integer"
+                                    },
+                                    "quoteLineActive": {
+                                      "type": "boolean"
+                                    },
+                                    "cqQuoteLineExtn": {
+                                      "type": "object",
+                                      "properties": {
+                                        "requestedStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "actionTag": {
+                                          "type": "string"
+                                        },
+                                        "nonStandardFlag": {
+                                          "type": "integer"
+                                        },
+                                        "initialTerm": {
+                                          "type": "integer"
+                                        },
+                                        "autoRenewalTerm": {
+                                          "type": "integer"
+                                        },
+                                        "prepayTerm": {
+                                          "type": "string"
+                                        },
+                                        "usageQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "unitOfMeasurement": {
+                                          "type": "string"
+                                        },
+                                        "unitNetPrice": {
+                                          "type": "number"
+                                        },
+                                        "chargeType": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionEndDate": {
+                                          "type": "string"
+                                        },
+                                        "lineType": {
+                                          "type": "string"
+                                        },
+                                        "defaultFlag": {
+                                          "type": "string"
+                                        },
+                                        "requestedStartDate": {
+                                          "type": "string"
+                                        },
+                                        "requestedEndDate": {
+                                          "type": "string"
+                                        },
+                                        "updatedBy": {
+                                          "type": "string"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "billingModel": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionEndDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "priceListVersion": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "requestedStartDateAsDate",
+                                        "actionTag",
+                                        "nonStandardFlag",
+                                        "initialTerm",
+                                        "autoRenewalTerm",
+                                        "prepayTerm",
+                                        "usageQuantity",
+                                        "unitOfMeasurement",
+                                        "unitNetPrice",
+                                        "chargeType",
+                                        "subscriptionStartDate",
+                                        "subscriptionEndDate",
+                                        "lineType",
+                                        "defaultFlag",
+                                        "requestedStartDate",
+                                        "requestedEndDate",
+                                        "updatedBy",
+                                        "updatedOn",
+                                        "billingModel",
+                                        "subscriptionEndDateAsDate",
+                                        "subscriptionStartDateAsDate",
+                                        "priceListVersion"
+                                      ]
+                                    },
+                                    "quoteMarginLine": {
+                                      "type": "object",
+                                      "properties": {
+                                        "grossMargin": {
+                                          "type": "string"
+                                        },
+                                        "parentLineObjectId": {
+                                          "type": "string"
+                                        },
+                                        "listPrice": {
+                                          "type": "integer"
+                                        },
+                                        "extListPrice": {
+                                          "type": "integer"
+                                        },
+                                        "quantity": {
+                                          "type": "integer"
+                                        },
+                                        "quoteObjectId": {
+                                          "type": "integer"
+                                        },
+                                        "lineType": {
+                                          "type": "integer"
+                                        },
+                                        "lineNumber": {
+                                          "type": "string"
+                                        },
+                                        "royaltyQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "standardMargin": {
+                                          "type": "integer"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "partNumber": {
+                                          "type": "string"
+                                        },
+                                        "objectId": {
+                                          "type": "integer"
+                                        },
+                                        "sourceType": {
+                                          "type": "integer"
+                                        },
+                                        "createdOn": {
+                                          "type": "string"
+                                        },
+                                        "standardCost": {
+                                          "type": "integer"
+                                        },
+                                        "royalty": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "grossMargin",
+                                        "parentLineObjectId",
+                                        "listPrice",
+                                        "extListPrice",
+                                        "quantity",
+                                        "quoteObjectId",
+                                        "lineType",
+                                        "lineNumber",
+                                        "royaltyQuantity",
+                                        "standardMargin",
+                                        "updatedOn",
+                                        "partNumber",
+                                        "objectId",
+                                        "sourceType",
+                                        "createdOn",
+                                        "standardCost",
+                                        "royalty"
+                                      ]
+                                    },
+                                    "finalDiscount": {
+                                      "type": "number"
+                                    },
+                                    "buyMethod": {
+                                      "type": "string"
+                                    },
+                                    "isXaasSKu": {
+                                      "type": "string"
+                                    },
+                                    "unitNetPriceBeforeCredit": {
+                                      "type": "number"
+                                    },
+                                    "IS_PBR": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedAdjustedDisc": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitNet": {
+                                      "type": "number"
+                                    },
+                                    "rollupNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQty": {
+                                      "type": "integer"
+                                    },
+                                    "isPosSkuDisable": {
+                                      "type": "string"
+                                    },
+                                    "userFaActed": {
+                                      "type": "string"
+                                    },
+                                    "rollupMinorLineIdentifier": {
+                                      "type": "integer"
+                                    },
+                                    "adjustedDisc": {
+                                      "type": "integer"
+                                    },
+                                    "soaServiceable": {
+                                      "type": "string"
+                                    },
+                                    "rollupUnitNetStd": {
+                                      "type": "number"
+                                    },
+                                    "rollupLeadTime": {
+                                      "type": "integer"
+                                    },
+                                    "isSmartProvisioned": {
+                                      "type": "string"
+                                    },
+                                    "rollupEffectiveDisc": {
+                                      "type": "number"
+                                    },
+                                    "rollupExtNetPriceAmtStd": {
+                                      "type": "integer"
+                                    },
+                                    "isElaFamily": {
+                                      "type": "string"
+                                    },
+                                    "rollupTradeInCreditAmtNs": {
+                                      "type": "integer"
+                                    },
+                                    "rollupExtListPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalDisc": {
+                                      "type": "number"
+                                    },
+                                    "isLock": {
+                                      "type": "string"
+                                    },
+                                    "billingAmount": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitNetBeforeCredit": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalCredit": {
+                                      "type": "integer"
+                                    },
+                                    "siteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "detachServicesFlag": {
+                                      "type": "string"
+                                    },
+                                    "serviceToSiteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "enrichmentStatus": {
+                                      "type": "string"
+                                    },
+                                    "rollupTotalDiscAmt": {
+                                      "type": "number"
+                                    },
+                                    "lineTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "lineTypeSubTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "finalNetPriceUnrounded": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "active",
+                                    "additionalItemInfo",
+                                    "additionalUnitCreditAmt",
+                                    "attributionMethodology",
+                                    "attributionRequired",
+                                    "ciscoFulfillmentId",
+                                    "configPath",
+                                    "configVerifiedOn",
+                                    "configurableFlag",
+                                    "constructType",
+                                    "contractualDisc",
+                                    "createdBy",
+                                    "createdOn",
+                                    "decimalExpansionValue",
+                                    "deferDartFlag",
+                                    "deliveryOption",
+                                    "description",
+                                    "distyInvQtyDate",
+                                    "drpFlag",
+                                    "durationEndDate",
+                                    "durationStartDate",
+                                    "effectiveDiscStd",
+                                    "endDateAlignEligibleFlag",
+                                    "eosDate",
+                                    "extListPrice",
+                                    "extNetPriceAmtExcludeMyd",
+                                    "extNetPrice",
+                                    "finalNetPrice",
+                                    "inventoryItemId",
+                                    "isAdjustable",
+                                    "isDistiOnly",
+                                    "isLpsFetchedFrmLps",
+                                    "isSkuEolPriced",
+                                    "isTransactionELA",
+                                    "itemPath",
+                                    "itemType",
+                                    "lineNumber",
+                                    "lineOrigin",
+                                    "lineType",
+                                    "unitListPrice",
+                                    "maxAllowedDiscStd",
+                                    "mlbIndicator",
+                                    "negotiatedDiscNs",
+                                    "negotiatedDiscount",
+                                    "negotiatedNetPriceAmt",
+                                    "nonStandardDisc",
+                                    "nphDate",
+                                    "objectId",
+                                    "oemRebFlag",
+                                    "parentLineObjectId",
+                                    "partNumber",
+                                    "promoDisc",
+                                    "quantity",
+                                    "quoteObjectId",
+                                    "refurbishedFlag",
+                                    "selectedPath",
+                                    "singleSkuLineType",
+                                    "soaSubscriptionType",
+                                    "sourceObjectId",
+                                    "sourceType",
+                                    "subscriptionCredit",
+                                    "uiHide",
+                                    "velocityFlag",
+                                    "wfPriced",
+                                    "wplListPrice",
+                                    "updatedTimeStamp",
+                                    "updatedBy",
+                                    "updatedOn",
+                                    "monthlyCredit",
+                                    "pricingTerm",
+                                    "unitNetPriceQtyInclCredit",
+                                    "listPrice",
+                                    "quoteLineActive",
+                                    "cqQuoteLineExtn",
+                                    "quoteMarginLine",
+                                    "finalDiscount",
+                                    "buyMethod",
+                                    "isXaasSKu",
+                                    "unitNetPriceBeforeCredit",
+                                    "IS_PBR",
+                                    "negotiatedAdjustedDisc",
+                                    "rollupUnitNet",
+                                    "rollupNetPriceAmt",
+                                    "unitNetPriceQty",
+                                    "isPosSkuDisable",
+                                    "userFaActed",
+                                    "rollupMinorLineIdentifier",
+                                    "adjustedDisc",
+                                    "soaServiceable",
+                                    "rollupUnitNetStd",
+                                    "rollupLeadTime",
+                                    "isSmartProvisioned",
+                                    "rollupEffectiveDisc",
+                                    "rollupExtNetPriceAmtStd",
+                                    "isElaFamily",
+                                    "rollupTradeInCreditAmtNs",
+                                    "rollupExtListPriceAmt",
+                                    "rollupTotalDisc",
+                                    "isLock",
+                                    "billingAmount",
+                                    "rollupUnitListPrice",
+                                    "rollupUnitNetBeforeCredit",
+                                    "rollupTotalCredit",
+                                    "siteObjectId",
+                                    "detachServicesFlag",
+                                    "serviceToSiteObjectId",
+                                    "enrichmentStatus",
+                                    "rollupTotalDiscAmt",
+                                    "lineTypeDesc",
+                                    "lineTypeSubTypeDesc",
+                                    "finalNetPriceUnrounded"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "active": {
+                                      "type": "integer"
+                                    },
+                                    "additionalItemInfo": {
+                                      "type": "string"
+                                    },
+                                    "additionalUnitCreditAmt": {
+                                      "type": "integer"
+                                    },
+                                    "ciscoFulfillmentId": {
+                                      "type": "integer"
+                                    },
+                                    "configPath": {
+                                      "type": "string"
+                                    },
+                                    "configVerifiedOn": {
+                                      "type": "string"
+                                    },
+                                    "configurableFlag": {
+                                      "type": "string"
+                                    },
+                                    "contractualDisc": {
+                                      "type": "number"
+                                    },
+                                    "createdBy": {
+                                      "type": "string"
+                                    },
+                                    "createdOn": {
+                                      "type": "string"
+                                    },
+                                    "decimalExpansionValue": {
+                                      "type": "integer"
+                                    },
+                                    "deferDartFlag": {
+                                      "type": "string"
+                                    },
+                                    "deliveryOption": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": "string"
+                                    },
+                                    "distyInvQtyDate": {
+                                      "type": "string"
+                                    },
+                                    "drpFlag": {
+                                      "type": "string"
+                                    },
+                                    "durationEndDate": {
+                                      "type": "string"
+                                    },
+                                    "durationStartDate": {
+                                      "type": "string"
+                                    },
+                                    "effectiveDiscStd": {
+                                      "type": "number"
+                                    },
+                                    "endDateAlignEligibleFlag": {
+                                      "type": "string"
+                                    },
+                                    "eosDate": {
+                                      "type": "string"
+                                    },
+                                    "extListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPriceAmtExcludeMyd": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "finalNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "inventoryItemId": {
+                                      "type": "integer"
+                                    },
+                                    "isAdjustable": {
+                                      "type": "string"
+                                    },
+                                    "isDistiOnly": {
+                                      "type": "string"
+                                    },
+                                    "isLpsFetchedFrmLps": {
+                                      "type": "string"
+                                    },
+                                    "isSkuEolPriced": {
+                                      "type": "string"
+                                    },
+                                    "isTransactionELA": {
+                                      "type": "string"
+                                    },
+                                    "itemPath": {
+                                      "type": "string"
+                                    },
+                                    "itemType": {
+                                      "type": "string"
+                                    },
+                                    "lineNumber": {
+                                      "type": "string"
+                                    },
+                                    "lineOrigin": {
+                                      "type": "string"
+                                    },
+                                    "lineType": {
+                                      "type": "integer"
+                                    },
+                                    "unitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "maxAllowedDiscStd": {
+                                      "type": "integer"
+                                    },
+                                    "mlbIndicator": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedDiscNs": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedDiscount": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "nonStandardDisc": {
+                                      "type": "number"
+                                    },
+                                    "nphDate": {
+                                      "type": "string"
+                                    },
+                                    "objectId": {
+                                      "type": "integer"
+                                    },
+                                    "oemRebFlag": {
+                                      "type": "string"
+                                    },
+                                    "parentLineObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "partNumber": {
+                                      "type": "string"
+                                    },
+                                    "promoDisc": {
+                                      "type": "integer"
+                                    },
+                                    "quantity": {
+                                      "type": "integer"
+                                    },
+                                    "quoteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "refurbishedFlag": {
+                                      "type": "string"
+                                    },
+                                    "selectedPath": {
+                                      "type": "string"
+                                    },
+                                    "serviceLevelCode": {
+                                      "type": "string"
+                                    },
+                                    "soaSubscriptionType": {
+                                      "type": "string"
+                                    },
+                                    "sourceObjectId": {
+                                      "type": "string"
+                                    },
+                                    "sourceType": {
+                                      "type": "integer"
+                                    },
+                                    "uiHide": {
+                                      "type": "string"
+                                    },
+                                    "velocityFlag": {
+                                      "type": "string"
+                                    },
+                                    "wfPriced": {
+                                      "type": "string"
+                                    },
+                                    "wplListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "updatedTimeStamp": {
+                                      "type": "string"
+                                    },
+                                    "updatedBy": {
+                                      "type": "string"
+                                    },
+                                    "updatedOn": {
+                                      "type": "string"
+                                    },
+                                    "monthlyCredit": {
+                                      "type": "integer"
+                                    },
+                                    "pricingTerm": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQtyInclCredit": {
+                                      "type": "integer"
+                                    },
+                                    "listPrice": {
+                                      "type": "integer"
+                                    },
+                                    "quoteLineActive": {
+                                      "type": "boolean"
+                                    },
+                                    "cqQuoteLineExtn": {
+                                      "type": "object",
+                                      "properties": {
+                                        "requestedStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "actionTag": {
+                                          "type": "string"
+                                        },
+                                        "nonStandardFlag": {
+                                          "type": "integer"
+                                        },
+                                        "initialTerm": {
+                                          "type": "integer"
+                                        },
+                                        "autoRenewalTerm": {
+                                          "type": "integer"
+                                        },
+                                        "prepayTerm": {
+                                          "type": "string"
+                                        },
+                                        "usageQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "unitOfMeasurement": {
+                                          "type": "string"
+                                        },
+                                        "unitNetPrice": {
+                                          "type": "integer"
+                                        },
+                                        "chargeType": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionEndDate": {
+                                          "type": "string"
+                                        },
+                                        "lineType": {
+                                          "type": "string"
+                                        },
+                                        "defaultFlag": {
+                                          "type": "string"
+                                        },
+                                        "requestedStartDate": {
+                                          "type": "string"
+                                        },
+                                        "requestedEndDate": {
+                                          "type": "string"
+                                        },
+                                        "updatedBy": {
+                                          "type": "string"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "billingModel": {
+                                          "type": "string"
+                                        },
+                                        "supportPercentage": {
+                                          "type": "integer"
+                                        },
+                                        "supportLevel": {
+                                          "type": "string"
+                                        },
+                                        "supportMinimum": {
+                                          "type": "integer"
+                                        },
+                                        "subscriptionEndDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "priceListVersion": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "requestedStartDateAsDate",
+                                        "actionTag",
+                                        "nonStandardFlag",
+                                        "initialTerm",
+                                        "autoRenewalTerm",
+                                        "prepayTerm",
+                                        "usageQuantity",
+                                        "unitOfMeasurement",
+                                        "unitNetPrice",
+                                        "chargeType",
+                                        "subscriptionStartDate",
+                                        "subscriptionEndDate",
+                                        "lineType",
+                                        "defaultFlag",
+                                        "requestedStartDate",
+                                        "requestedEndDate",
+                                        "updatedBy",
+                                        "updatedOn",
+                                        "billingModel",
+                                        "supportPercentage",
+                                        "supportLevel",
+                                        "supportMinimum",
+                                        "subscriptionEndDateAsDate",
+                                        "subscriptionStartDateAsDate",
+                                        "priceListVersion"
+                                      ]
+                                    },
+                                    "quoteMarginLine": {
+                                      "type": "object",
+                                      "properties": {
+                                        "grossMargin": {
+                                          "type": "string"
+                                        },
+                                        "parentLineObjectId": {
+                                          "type": "string"
+                                        },
+                                        "listPrice": {
+                                          "type": "integer"
+                                        },
+                                        "extListPrice": {
+                                          "type": "integer"
+                                        },
+                                        "quantity": {
+                                          "type": "integer"
+                                        },
+                                        "quoteObjectId": {
+                                          "type": "integer"
+                                        },
+                                        "lineType": {
+                                          "type": "integer"
+                                        },
+                                        "lineNumber": {
+                                          "type": "string"
+                                        },
+                                        "royaltyQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "standardMargin": {
+                                          "type": "integer"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "partNumber": {
+                                          "type": "string"
+                                        },
+                                        "objectId": {
+                                          "type": "integer"
+                                        },
+                                        "sourceType": {
+                                          "type": "integer"
+                                        },
+                                        "createdOn": {
+                                          "type": "string"
+                                        },
+                                        "standardCost": {
+                                          "type": "integer"
+                                        },
+                                        "royalty": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "grossMargin",
+                                        "parentLineObjectId",
+                                        "listPrice",
+                                        "extListPrice",
+                                        "quantity",
+                                        "quoteObjectId",
+                                        "lineType",
+                                        "lineNumber",
+                                        "royaltyQuantity",
+                                        "standardMargin",
+                                        "updatedOn",
+                                        "partNumber",
+                                        "objectId",
+                                        "sourceType",
+                                        "createdOn",
+                                        "standardCost",
+                                        "royalty"
+                                      ]
+                                    },
+                                    "finalDiscount": {
+                                      "type": "number"
+                                    },
+                                    "buyMethod": {
+                                      "type": "string"
+                                    },
+                                    "isXaasSKu": {
+                                      "type": "string"
+                                    },
+                                    "unitNetPriceBeforeCredit": {
+                                      "type": "integer"
+                                    },
+                                    "IS_PBR": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedAdjustedDisc": {
+                                      "type": "number"
+                                    },
+                                    "rollupUnitNet": {
+                                      "type": "integer"
+                                    },
+                                    "rollupNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQty": {
+                                      "type": "integer"
+                                    },
+                                    "isPosSkuDisable": {
+                                      "type": "string"
+                                    },
+                                    "userFaActed": {
+                                      "type": "string"
+                                    },
+                                    "rollupMinorLineIdentifier": {
+                                      "type": "integer"
+                                    },
+                                    "adjustedDisc": {
+                                      "type": "integer"
+                                    },
+                                    "soaServiceable": {
+                                      "type": "string"
+                                    },
+                                    "rollupUnitNetStd": {
+                                      "type": "integer"
+                                    },
+                                    "rollupLeadTime": {
+                                      "type": "integer"
+                                    },
+                                    "isSmartProvisioned": {
+                                      "type": "string"
+                                    },
+                                    "rollupEffectiveDisc": {
+                                      "type": "number"
+                                    },
+                                    "rollupExtNetPriceAmtStd": {
+                                      "type": "integer"
+                                    },
+                                    "isElaFamily": {
+                                      "type": "string"
+                                    },
+                                    "rollupTradeInCreditAmtNs": {
+                                      "type": "integer"
+                                    },
+                                    "rollupExtListPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalDisc": {
+                                      "type": "number"
+                                    },
+                                    "isLock": {
+                                      "type": "string"
+                                    },
+                                    "billingAmount": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitNetBeforeCredit": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalCredit": {
+                                      "type": "integer"
+                                    },
+                                    "siteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "detachServicesFlag": {
+                                      "type": "string"
+                                    },
+                                    "serviceToSiteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "enrichmentStatus": {
+                                      "type": "string"
+                                    },
+                                    "rollupTotalDiscAmt": {
+                                      "type": "integer"
+                                    },
+                                    "lineTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "lineTypeSubTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "finalNetPriceUnrounded": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "active",
+                                    "additionalItemInfo",
+                                    "additionalUnitCreditAmt",
+                                    "ciscoFulfillmentId",
+                                    "configPath",
+                                    "configVerifiedOn",
+                                    "configurableFlag",
+                                    "contractualDisc",
+                                    "createdBy",
+                                    "createdOn",
+                                    "decimalExpansionValue",
+                                    "deferDartFlag",
+                                    "deliveryOption",
+                                    "description",
+                                    "distyInvQtyDate",
+                                    "drpFlag",
+                                    "durationEndDate",
+                                    "durationStartDate",
+                                    "effectiveDiscStd",
+                                    "endDateAlignEligibleFlag",
+                                    "eosDate",
+                                    "extListPrice",
+                                    "extNetPriceAmtExcludeMyd",
+                                    "extNetPrice",
+                                    "finalNetPrice",
+                                    "inventoryItemId",
+                                    "isAdjustable",
+                                    "isDistiOnly",
+                                    "isLpsFetchedFrmLps",
+                                    "isSkuEolPriced",
+                                    "isTransactionELA",
+                                    "itemPath",
+                                    "itemType",
+                                    "lineNumber",
+                                    "lineOrigin",
+                                    "lineType",
+                                    "unitListPrice",
+                                    "maxAllowedDiscStd",
+                                    "mlbIndicator",
+                                    "negotiatedDiscNs",
+                                    "negotiatedDiscount",
+                                    "negotiatedNetPriceAmt",
+                                    "nonStandardDisc",
+                                    "nphDate",
+                                    "objectId",
+                                    "oemRebFlag",
+                                    "parentLineObjectId",
+                                    "partNumber",
+                                    "promoDisc",
+                                    "quantity",
+                                    "quoteObjectId",
+                                    "refurbishedFlag",
+                                    "selectedPath",
+                                    "serviceLevelCode",
+                                    "soaSubscriptionType",
+                                    "sourceObjectId",
+                                    "sourceType",
+                                    "uiHide",
+                                    "velocityFlag",
+                                    "wfPriced",
+                                    "wplListPrice",
+                                    "updatedTimeStamp",
+                                    "updatedBy",
+                                    "updatedOn",
+                                    "monthlyCredit",
+                                    "pricingTerm",
+                                    "unitNetPriceQtyInclCredit",
+                                    "listPrice",
+                                    "quoteLineActive",
+                                    "cqQuoteLineExtn",
+                                    "quoteMarginLine",
+                                    "finalDiscount",
+                                    "buyMethod",
+                                    "isXaasSKu",
+                                    "unitNetPriceBeforeCredit",
+                                    "IS_PBR",
+                                    "negotiatedAdjustedDisc",
+                                    "rollupUnitNet",
+                                    "rollupNetPriceAmt",
+                                    "unitNetPriceQty",
+                                    "isPosSkuDisable",
+                                    "userFaActed",
+                                    "rollupMinorLineIdentifier",
+                                    "adjustedDisc",
+                                    "soaServiceable",
+                                    "rollupUnitNetStd",
+                                    "rollupLeadTime",
+                                    "isSmartProvisioned",
+                                    "rollupEffectiveDisc",
+                                    "rollupExtNetPriceAmtStd",
+                                    "isElaFamily",
+                                    "rollupTradeInCreditAmtNs",
+                                    "rollupExtListPriceAmt",
+                                    "rollupTotalDisc",
+                                    "isLock",
+                                    "billingAmount",
+                                    "rollupUnitListPrice",
+                                    "rollupUnitNetBeforeCredit",
+                                    "rollupTotalCredit",
+                                    "siteObjectId",
+                                    "detachServicesFlag",
+                                    "serviceToSiteObjectId",
+                                    "enrichmentStatus",
+                                    "rollupTotalDiscAmt",
+                                    "lineTypeDesc",
+                                    "lineTypeSubTypeDesc",
+                                    "finalNetPriceUnrounded"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "active": {
+                                      "type": "integer"
+                                    },
+                                    "additionalItemInfo": {
+                                      "type": "string"
+                                    },
+                                    "additionalUnitCreditAmt": {
+                                      "type": "integer"
+                                    },
+                                    "attributionMethodology": {
+                                      "type": "string"
+                                    },
+                                    "attributionRequired": {
+                                      "type": "string"
+                                    },
+                                    "ciscoFulfillmentId": {
+                                      "type": "integer"
+                                    },
+                                    "configPath": {
+                                      "type": "string"
+                                    },
+                                    "configVerifiedOn": {
+                                      "type": "string"
+                                    },
+                                    "configurableFlag": {
+                                      "type": "string"
+                                    },
+                                    "constructType": {
+                                      "type": "string"
+                                    },
+                                    "contractualDisc": {
+                                      "type": "number"
+                                    },
+                                    "createdBy": {
+                                      "type": "string"
+                                    },
+                                    "createdOn": {
+                                      "type": "string"
+                                    },
+                                    "decimalExpansionValue": {
+                                      "type": "integer"
+                                    },
+                                    "deferDartFlag": {
+                                      "type": "string"
+                                    },
+                                    "deliveryOption": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": "string"
+                                    },
+                                    "distyInvQtyDate": {
+                                      "type": "string"
+                                    },
+                                    "drpFlag": {
+                                      "type": "string"
+                                    },
+                                    "durationEndDate": {
+                                      "type": "string"
+                                    },
+                                    "durationStartDate": {
+                                      "type": "string"
+                                    },
+                                    "effectiveDiscStd": {
+                                      "type": "number"
+                                    },
+                                    "endDateAlignEligibleFlag": {
+                                      "type": "string"
+                                    },
+                                    "eosDate": {
+                                      "type": "string"
+                                    },
+                                    "extListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPriceAmtExcludeMyd": {
+                                      "type": "integer"
+                                    },
+                                    "extNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "finalNetPrice": {
+                                      "type": "integer"
+                                    },
+                                    "inventoryItemId": {
+                                      "type": "integer"
+                                    },
+                                    "isAdjustable": {
+                                      "type": "string"
+                                    },
+                                    "isDistiOnly": {
+                                      "type": "string"
+                                    },
+                                    "isLpsFetchedFrmLps": {
+                                      "type": "string"
+                                    },
+                                    "isSkuEolPriced": {
+                                      "type": "string"
+                                    },
+                                    "isTransactionELA": {
+                                      "type": "string"
+                                    },
+                                    "itemPath": {
+                                      "type": "string"
+                                    },
+                                    "itemType": {
+                                      "type": "string"
+                                    },
+                                    "lineNumber": {
+                                      "type": "string"
+                                    },
+                                    "lineOrigin": {
+                                      "type": "string"
+                                    },
+                                    "lineType": {
+                                      "type": "integer"
+                                    },
+                                    "unitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "maxAllowedDiscStd": {
+                                      "type": "integer"
+                                    },
+                                    "mlbIndicator": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedDiscNs": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedDiscount": {
+                                      "type": "number"
+                                    },
+                                    "negotiatedNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "nonStandardDisc": {
+                                      "type": "number"
+                                    },
+                                    "nphDate": {
+                                      "type": "string"
+                                    },
+                                    "objectId": {
+                                      "type": "integer"
+                                    },
+                                    "oemRebFlag": {
+                                      "type": "string"
+                                    },
+                                    "parentLineObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "partNumber": {
+                                      "type": "string"
+                                    },
+                                    "promoDisc": {
+                                      "type": "integer"
+                                    },
+                                    "quantity": {
+                                      "type": "integer"
+                                    },
+                                    "quoteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "refurbishedFlag": {
+                                      "type": "string"
+                                    },
+                                    "selectedPath": {
+                                      "type": "string"
+                                    },
+                                    "singleSkuLineType": {
+                                      "type": "integer"
+                                    },
+                                    "soaSubscriptionType": {
+                                      "type": "string"
+                                    },
+                                    "sourceObjectId": {
+                                      "type": "string"
+                                    },
+                                    "sourceType": {
+                                      "type": "integer"
+                                    },
+                                    "subscriptionCredit": {
+                                      "type": "integer"
+                                    },
+                                    "uiHide": {
+                                      "type": "string"
+                                    },
+                                    "velocityFlag": {
+                                      "type": "string"
+                                    },
+                                    "wfPriced": {
+                                      "type": "string"
+                                    },
+                                    "wplListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "updatedTimeStamp": {
+                                      "type": "string"
+                                    },
+                                    "updatedBy": {
+                                      "type": "string"
+                                    },
+                                    "updatedOn": {
+                                      "type": "string"
+                                    },
+                                    "monthlyCredit": {
+                                      "type": "number"
+                                    },
+                                    "pricingTerm": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQtyInclCredit": {
+                                      "type": "number"
+                                    },
+                                    "listPrice": {
+                                      "type": "integer"
+                                    },
+                                    "quoteLineActive": {
+                                      "type": "boolean"
+                                    },
+                                    "cqQuoteLineExtn": {
+                                      "type": "object",
+                                      "properties": {
+                                        "requestedStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "actionTag": {
+                                          "type": "string"
+                                        },
+                                        "nonStandardFlag": {
+                                          "type": "integer"
+                                        },
+                                        "initialTerm": {
+                                          "type": "integer"
+                                        },
+                                        "autoRenewalTerm": {
+                                          "type": "integer"
+                                        },
+                                        "prepayTerm": {
+                                          "type": "string"
+                                        },
+                                        "usageQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "unitOfMeasurement": {
+                                          "type": "string"
+                                        },
+                                        "unitNetPrice": {
+                                          "type": "number"
+                                        },
+                                        "chargeType": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionEndDate": {
+                                          "type": "string"
+                                        },
+                                        "lineType": {
+                                          "type": "string"
+                                        },
+                                        "defaultFlag": {
+                                          "type": "string"
+                                        },
+                                        "requestedStartDate": {
+                                          "type": "string"
+                                        },
+                                        "requestedEndDate": {
+                                          "type": "string"
+                                        },
+                                        "updatedBy": {
+                                          "type": "string"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "billingModel": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionEndDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "subscriptionStartDateAsDate": {
+                                          "type": "string"
+                                        },
+                                        "priceListVersion": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "requestedStartDateAsDate",
+                                        "actionTag",
+                                        "nonStandardFlag",
+                                        "initialTerm",
+                                        "autoRenewalTerm",
+                                        "prepayTerm",
+                                        "usageQuantity",
+                                        "unitOfMeasurement",
+                                        "unitNetPrice",
+                                        "chargeType",
+                                        "subscriptionStartDate",
+                                        "subscriptionEndDate",
+                                        "lineType",
+                                        "defaultFlag",
+                                        "requestedStartDate",
+                                        "requestedEndDate",
+                                        "updatedBy",
+                                        "updatedOn",
+                                        "billingModel",
+                                        "subscriptionEndDateAsDate",
+                                        "subscriptionStartDateAsDate",
+                                        "priceListVersion"
+                                      ]
+                                    },
+                                    "quoteMarginLine": {
+                                      "type": "object",
+                                      "properties": {
+                                        "grossMargin": {
+                                          "type": "string"
+                                        },
+                                        "parentLineObjectId": {
+                                          "type": "string"
+                                        },
+                                        "listPrice": {
+                                          "type": "integer"
+                                        },
+                                        "extListPrice": {
+                                          "type": "integer"
+                                        },
+                                        "quantity": {
+                                          "type": "integer"
+                                        },
+                                        "quoteObjectId": {
+                                          "type": "integer"
+                                        },
+                                        "lineType": {
+                                          "type": "integer"
+                                        },
+                                        "lineNumber": {
+                                          "type": "string"
+                                        },
+                                        "royaltyQuantity": {
+                                          "type": "integer"
+                                        },
+                                        "standardMargin": {
+                                          "type": "integer"
+                                        },
+                                        "updatedOn": {
+                                          "type": "string"
+                                        },
+                                        "partNumber": {
+                                          "type": "string"
+                                        },
+                                        "objectId": {
+                                          "type": "integer"
+                                        },
+                                        "sourceType": {
+                                          "type": "integer"
+                                        },
+                                        "createdOn": {
+                                          "type": "string"
+                                        },
+                                        "standardCost": {
+                                          "type": "integer"
+                                        },
+                                        "royalty": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "grossMargin",
+                                        "parentLineObjectId",
+                                        "listPrice",
+                                        "extListPrice",
+                                        "quantity",
+                                        "quoteObjectId",
+                                        "lineType",
+                                        "lineNumber",
+                                        "royaltyQuantity",
+                                        "standardMargin",
+                                        "updatedOn",
+                                        "partNumber",
+                                        "objectId",
+                                        "sourceType",
+                                        "createdOn",
+                                        "standardCost",
+                                        "royalty"
+                                      ]
+                                    },
+                                    "finalDiscount": {
+                                      "type": "number"
+                                    },
+                                    "buyMethod": {
+                                      "type": "string"
+                                    },
+                                    "isXaasSKu": {
+                                      "type": "string"
+                                    },
+                                    "unitNetPriceBeforeCredit": {
+                                      "type": "number"
+                                    },
+                                    "IS_PBR": {
+                                      "type": "string"
+                                    },
+                                    "negotiatedAdjustedDisc": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitNet": {
+                                      "type": "number"
+                                    },
+                                    "rollupNetPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "unitNetPriceQty": {
+                                      "type": "integer"
+                                    },
+                                    "isPosSkuDisable": {
+                                      "type": "string"
+                                    },
+                                    "userFaActed": {
+                                      "type": "string"
+                                    },
+                                    "rollupMinorLineIdentifier": {
+                                      "type": "integer"
+                                    },
+                                    "adjustedDisc": {
+                                      "type": "integer"
+                                    },
+                                    "soaServiceable": {
+                                      "type": "string"
+                                    },
+                                    "rollupUnitNetStd": {
+                                      "type": "number"
+                                    },
+                                    "rollupLeadTime": {
+                                      "type": "integer"
+                                    },
+                                    "isSmartProvisioned": {
+                                      "type": "string"
+                                    },
+                                    "rollupEffectiveDisc": {
+                                      "type": "number"
+                                    },
+                                    "rollupExtNetPriceAmtStd": {
+                                      "type": "integer"
+                                    },
+                                    "isElaFamily": {
+                                      "type": "string"
+                                    },
+                                    "rollupTradeInCreditAmtNs": {
+                                      "type": "integer"
+                                    },
+                                    "rollupExtListPriceAmt": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalDisc": {
+                                      "type": "number"
+                                    },
+                                    "isLock": {
+                                      "type": "string"
+                                    },
+                                    "billingAmount": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitListPrice": {
+                                      "type": "integer"
+                                    },
+                                    "rollupUnitNetBeforeCredit": {
+                                      "type": "integer"
+                                    },
+                                    "rollupTotalCredit": {
+                                      "type": "integer"
+                                    },
+                                    "siteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "detachServicesFlag": {
+                                      "type": "string"
+                                    },
+                                    "serviceToSiteObjectId": {
+                                      "type": "integer"
+                                    },
+                                    "enrichmentStatus": {
+                                      "type": "string"
+                                    },
+                                    "rollupTotalDiscAmt": {
+                                      "type": "number"
+                                    },
+                                    "lineTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "lineTypeSubTypeDesc": {
+                                      "type": "string"
+                                    },
+                                    "finalNetPriceUnrounded": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "active",
+                                    "additionalItemInfo",
+                                    "additionalUnitCreditAmt",
+                                    "attributionMethodology",
+                                    "attributionRequired",
+                                    "ciscoFulfillmentId",
+                                    "configPath",
+                                    "configVerifiedOn",
+                                    "configurableFlag",
+                                    "constructType",
+                                    "contractualDisc",
+                                    "createdBy",
+                                    "createdOn",
+                                    "decimalExpansionValue",
+                                    "deferDartFlag",
+                                    "deliveryOption",
+                                    "description",
+                                    "distyInvQtyDate",
+                                    "drpFlag",
+                                    "durationEndDate",
+                                    "durationStartDate",
+                                    "effectiveDiscStd",
+                                    "endDateAlignEligibleFlag",
+                                    "eosDate",
+                                    "extListPrice",
+                                    "extNetPriceAmtExcludeMyd",
+                                    "extNetPrice",
+                                    "finalNetPrice",
+                                    "inventoryItemId",
+                                    "isAdjustable",
+                                    "isDistiOnly",
+                                    "isLpsFetchedFrmLps",
+                                    "isSkuEolPriced",
+                                    "isTransactionELA",
+                                    "itemPath",
+                                    "itemType",
+                                    "lineNumber",
+                                    "lineOrigin",
+                                    "lineType",
+                                    "unitListPrice",
+                                    "maxAllowedDiscStd",
+                                    "mlbIndicator",
+                                    "negotiatedDiscNs",
+                                    "negotiatedDiscount",
+                                    "negotiatedNetPriceAmt",
+                                    "nonStandardDisc",
+                                    "nphDate",
+                                    "objectId",
+                                    "oemRebFlag",
+                                    "parentLineObjectId",
+                                    "partNumber",
+                                    "promoDisc",
+                                    "quantity",
+                                    "quoteObjectId",
+                                    "refurbishedFlag",
+                                    "selectedPath",
+                                    "singleSkuLineType",
+                                    "soaSubscriptionType",
+                                    "sourceObjectId",
+                                    "sourceType",
+                                    "subscriptionCredit",
+                                    "uiHide",
+                                    "velocityFlag",
+                                    "wfPriced",
+                                    "wplListPrice",
+                                    "updatedTimeStamp",
+                                    "updatedBy",
+                                    "updatedOn",
+                                    "monthlyCredit",
+                                    "pricingTerm",
+                                    "unitNetPriceQtyInclCredit",
+                                    "listPrice",
+                                    "quoteLineActive",
+                                    "cqQuoteLineExtn",
+                                    "quoteMarginLine",
+                                    "finalDiscount",
+                                    "buyMethod",
+                                    "isXaasSKu",
+                                    "unitNetPriceBeforeCredit",
+                                    "IS_PBR",
+                                    "negotiatedAdjustedDisc",
+                                    "rollupUnitNet",
+                                    "rollupNetPriceAmt",
+                                    "unitNetPriceQty",
+                                    "isPosSkuDisable",
+                                    "userFaActed",
+                                    "rollupMinorLineIdentifier",
+                                    "adjustedDisc",
+                                    "soaServiceable",
+                                    "rollupUnitNetStd",
+                                    "rollupLeadTime",
+                                    "isSmartProvisioned",
+                                    "rollupEffectiveDisc",
+                                    "rollupExtNetPriceAmtStd",
+                                    "isElaFamily",
+                                    "rollupTradeInCreditAmtNs",
+                                    "rollupExtListPriceAmt",
+                                    "rollupTotalDisc",
+                                    "isLock",
+                                    "billingAmount",
+                                    "rollupUnitListPrice",
+                                    "rollupUnitNetBeforeCredit",
+                                    "rollupTotalCredit",
+                                    "siteObjectId",
+                                    "detachServicesFlag",
+                                    "serviceToSiteObjectId",
+                                    "enrichmentStatus",
+                                    "rollupTotalDiscAmt",
+                                    "lineTypeDesc",
+                                    "lineTypeSubTypeDesc",
+                                    "finalNetPriceUnrounded"
+                                  ]
+                                }
+                              ]
+                            },
+                            "active": {
+                              "type": "integer"
+                            },
+                            "additionalItemInfo": {
+                              "type": "string"
+                            },
+                            "additionalUnitCreditAmt": {
+                              "type": "integer"
+                            },
+                            "ciscoFulfillmentId": {
+                              "type": "integer"
+                            },
+                            "configPath": {
+                              "type": "string"
+                            },
+                            "configStatus": {
+                              "type": "string"
+                            },
+                            "configVerifiedOn": {
+                              "type": "string"
+                            },
+                            "configurableFlag": {
+                              "type": "string"
+                            },
+                            "contractualDisc": {
+                              "type": "number"
+                            },
+                            "cplDisc": {
+                              "type": "integer"
+                            },
+                            "createdBy": {
+                              "type": "string"
+                            },
+                            "createdOn": {
+                              "type": "string"
+                            },
+                            "decimalExpansionValue": {
+                              "type": "integer"
+                            },
+                            "deferDartFlag": {
+                              "type": "string"
+                            },
+                            "deliveryOption": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "distyInvQtyDate": {
+                              "type": "string"
+                            },
+                            "drpFlag": {
+                              "type": "string"
+                            },
+                            "durationEndDate": {
+                              "type": "string"
+                            },
+                            "durationStartDate": {
+                              "type": "string"
+                            },
+                            "effectiveDiscStd": {
+                              "type": "number"
+                            },
+                            "endDateAlignEligibleFlag": {
+                              "type": "string"
+                            },
+                            "eosDate": {
+                              "type": "string"
+                            },
+                            "extListPrice": {
+                              "type": "integer"
+                            },
+                            "extNetPriceAmtExcludeMyd": {
+                              "type": "integer"
+                            },
+                            "extNetPrice": {
+                              "type": "integer"
+                            },
+                            "finalNetPrice": {
+                              "type": "integer"
+                            },
+                            "inventoryItemId": {
+                              "type": "integer"
+                            },
+                            "isAdjustable": {
+                              "type": "string"
+                            },
+                            "isConfigMajor": {
+                              "type": "string"
+                            },
+                            "isDistiOnly": {
+                              "type": "string"
+                            },
+                            "isLpsFetchedFrmLps": {
+                              "type": "string"
+                            },
+                            "isSkuEolPriced": {
+                              "type": "string"
+                            },
+                            "isTransactionELA": {
+                              "type": "string"
+                            },
+                            "itemPath": {
+                              "type": "string"
+                            },
+                            "itemType": {
+                              "type": "string"
+                            },
+                            "lineNumber": {
+                              "type": "string"
+                            },
+                            "lineOrigin": {
+                              "type": "string"
+                            },
+                            "lineType": {
+                              "type": "integer"
+                            },
+                            "unitListPrice": {
+                              "type": "integer"
+                            },
+                            "maxAllowedDiscStd": {
+                              "type": "integer"
+                            },
+                            "mlbIndicator": {
+                              "type": "string"
+                            },
+                            "negotiatedDiscNs": {
+                              "type": "number"
+                            },
+                            "negotiatedDiscount": {
+                              "type": "number"
+                            },
+                            "negotiatedNetPriceAmt": {
+                              "type": "integer"
+                            },
+                            "nonStandardDisc": {
+                              "type": "number"
+                            },
+                            "nphDate": {
+                              "type": "string"
+                            },
+                            "objectId": {
+                              "type": "integer"
+                            },
+                            "oemRebFlag": {
+                              "type": "string"
+                            },
+                            "partNumber": {
+                              "type": "string"
+                            },
+                            "promoDisc": {
+                              "type": "integer"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            },
+                            "quoteObjectId": {
+                              "type": "integer"
+                            },
+                            "refurbishedFlag": {
+                              "type": "string"
+                            },
+                            "selectedPath": {
+                              "type": "string"
+                            },
+                            "soaSubscriptionType": {
+                              "type": "string"
+                            },
+                            "sourceObjectId": {
+                              "type": "string"
+                            },
+                            "sourceType": {
+                              "type": "integer"
+                            },
+                            "uiHide": {
+                              "type": "string"
+                            },
+                            "velocityFlag": {
+                              "type": "string"
+                            },
+                            "wfPriced": {
+                              "type": "string"
+                            },
+                            "wplListPrice": {
+                              "type": "integer"
+                            },
+                            "updatedTimeStamp": {
+                              "type": "string"
+                            },
+                            "updatedBy": {
+                              "type": "string"
+                            },
+                            "updatedOn": {
+                              "type": "string"
+                            },
+                            "monthlyCredit": {
+                              "type": "integer"
+                            },
+                            "isCombinedServiceFlag": {
+                              "type": "string"
+                            },
+                            "unitNetPriceQtyInclCredit": {
+                              "type": "integer"
+                            },
+                            "listPrice": {
+                              "type": "integer"
+                            },
+                            "quoteLineActive": {
+                              "type": "boolean"
+                            },
+                            "cqQuoteLineExtn": {
+                              "type": "object",
+                              "properties": {
+                                "requestedStartDateAsDate": {
+                                  "type": "string"
+                                },
+                                "actionTag": {
+                                  "type": "string"
+                                },
+                                "nonStandardFlag": {
+                                  "type": "integer"
+                                },
+                                "initialTerm": {
+                                  "type": "integer"
+                                },
+                                "autoRenewalTerm": {
+                                  "type": "integer"
+                                },
+                                "prepayTerm": {
+                                  "type": "string"
+                                },
+                                "unitNetPrice": {
+                                  "type": "integer"
+                                },
+                                "subscriptionStartDate": {
+                                  "type": "string"
+                                },
+                                "subscriptionEndDate": {
+                                  "type": "string"
+                                },
+                                "requestedStartDate": {
+                                  "type": "string"
+                                },
+                                "requestedEndDate": {
+                                  "type": "string"
+                                },
+                                "updatedBy": {
+                                  "type": "string"
+                                },
+                                "updatedOn": {
+                                  "type": "string"
+                                },
+                                "billingModel": {
+                                  "type": "string"
+                                },
+                                "drawdownAdvanceAmt": {
+                                  "type": "integer"
+                                },
+                                "subscriptionEndDateAsDate": {
+                                  "type": "string"
+                                },
+                                "subscriptionStartDateAsDate": {
+                                  "type": "string"
+                                },
+                                "priceListVersion": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "requestedStartDateAsDate",
+                                "actionTag",
+                                "nonStandardFlag",
+                                "initialTerm",
+                                "autoRenewalTerm",
+                                "prepayTerm",
+                                "unitNetPrice",
+                                "subscriptionStartDate",
+                                "subscriptionEndDate",
+                                "requestedStartDate",
+                                "requestedEndDate",
+                                "updatedBy",
+                                "updatedOn",
+                                "billingModel",
+                                "drawdownAdvanceAmt",
+                                "subscriptionEndDateAsDate",
+                                "subscriptionStartDateAsDate",
+                                "priceListVersion"
+                              ]
+                            },
+                            "quoteMarginLine": {
+                              "type": "object",
+                              "properties": {
+                                "grossMargin": {
+                                  "type": "string"
+                                },
+                                "listPrice": {
+                                  "type": "integer"
+                                },
+                                "extListPrice": {
+                                  "type": "integer"
+                                },
+                                "quantity": {
+                                  "type": "integer"
+                                },
+                                "quoteObjectId": {
+                                  "type": "integer"
+                                },
+                                "lineType": {
+                                  "type": "integer"
+                                },
+                                "lineNumber": {
+                                  "type": "string"
+                                },
+                                "royaltyQuantity": {
+                                  "type": "integer"
+                                },
+                                "standardMargin": {
+                                  "type": "integer"
+                                },
+                                "updatedOn": {
+                                  "type": "string"
+                                },
+                                "partNumber": {
+                                  "type": "string"
+                                },
+                                "objectId": {
+                                  "type": "integer"
+                                },
+                                "sourceType": {
+                                  "type": "integer"
+                                },
+                                "createdOn": {
+                                  "type": "string"
+                                },
+                                "standardCost": {
+                                  "type": "integer"
+                                },
+                                "royalty": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "grossMargin",
+                                "listPrice",
+                                "extListPrice",
+                                "quantity",
+                                "quoteObjectId",
+                                "lineType",
+                                "lineNumber",
+                                "royaltyQuantity",
+                                "standardMargin",
+                                "updatedOn",
+                                "partNumber",
+                                "objectId",
+                                "sourceType",
+                                "createdOn",
+                                "standardCost",
+                                "royalty"
+                              ]
+                            },
+                            "finalDiscount": {
+                              "type": "number"
+                            },
+                            "buyMethod": {
+                              "type": "string"
+                            },
+                            "isXaasSKu": {
+                              "type": "string"
+                            },
+                            "unitNetPriceBeforeCredit": {
+                              "type": "integer"
+                            },
+                            "IS_PBR": {
+                              "type": "string"
+                            },
+                            "negotiatedAdjustedDisc": {
+                              "type": "integer"
+                            },
+                            "rollupUnitNet": {
+                              "type": "integer"
+                            },
+                            "rollupNetPriceAmt": {
+                              "type": "integer"
+                            },
+                            "unitNetPriceQty": {
+                              "type": "integer"
+                            },
+                            "isPosSkuDisable": {
+                              "type": "string"
+                            },
+                            "shipToCountry": {
+                              "type": "string"
+                            },
+                            "userFaActed": {
+                              "type": "string"
+                            },
+                            "rollupMinorLineIdentifier": {
+                              "type": "integer"
+                            },
+                            "adjustedDisc": {
+                              "type": "integer"
+                            },
+                            "soaServiceable": {
+                              "type": "string"
+                            },
+                            "rollupUnitNetStd": {
+                              "type": "integer"
+                            },
+                            "rollupLeadTime": {
+                              "type": "integer"
+                            },
+                            "isSmartProvisioned": {
+                              "type": "string"
+                            },
+                            "rollupEffectiveDisc": {
+                              "type": "number"
+                            },
+                            "rollupExtNetPriceAmtStd": {
+                              "type": "integer"
+                            },
+                            "isElaFamily": {
+                              "type": "string"
+                            },
+                            "ciscoOnlyBuyMethod": {
+                              "type": "string"
+                            },
+                            "rollupTradeInCreditAmtNs": {
+                              "type": "integer"
+                            },
+                            "rollupExtListPriceAmt": {
+                              "type": "integer"
+                            },
+                            "rollupTotalDisc": {
+                              "type": "integer"
+                            },
+                            "isLock": {
+                              "type": "string"
+                            },
+                            "billingAmount": {
+                              "type": "integer"
+                            },
+                            "subtotalMarker": {
+                              "type": "string"
+                            },
+                            "rollupUnitListPrice": {
+                              "type": "integer"
+                            },
+                            "rollupEffectiveDiscStd": {
+                              "type": "number"
+                            },
+                            "rollupUnitNetBeforeCredit": {
+                              "type": "integer"
+                            },
+                            "rollupTotalCredit": {
+                              "type": "integer"
+                            },
+                            "siteObjectId": {
+                              "type": "integer"
+                            },
+                            "detachServicesFlag": {
+                              "type": "string"
+                            },
+                            "serviceToSiteObjectId": {
+                              "type": "integer"
+                            },
+                            "enrichmentStatus": {
+                              "type": "string"
+                            },
+                            "rollupTotalDiscAmt": {
+                              "type": "integer"
+                            },
+                            "lineTypeDesc": {
+                              "type": "string"
+                            },
+                            "lineTypeSubTypeDesc": {
+                              "type": "string"
+                            },
+                            "finalNetPriceUnrounded": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "childLines",
+                            "active",
+                            "additionalItemInfo",
+                            "additionalUnitCreditAmt",
+                            "ciscoFulfillmentId",
+                            "configPath",
+                            "configStatus",
+                            "configVerifiedOn",
+                            "configurableFlag",
+                            "contractualDisc",
+                            "cplDisc",
+                            "createdBy",
+                            "createdOn",
+                            "decimalExpansionValue",
+                            "deferDartFlag",
+                            "deliveryOption",
+                            "description",
+                            "distyInvQtyDate",
+                            "drpFlag",
+                            "durationEndDate",
+                            "durationStartDate",
+                            "effectiveDiscStd",
+                            "endDateAlignEligibleFlag",
+                            "eosDate",
+                            "extListPrice",
+                            "extNetPriceAmtExcludeMyd",
+                            "extNetPrice",
+                            "finalNetPrice",
+                            "inventoryItemId",
+                            "isAdjustable",
+                            "isConfigMajor",
+                            "isDistiOnly",
+                            "isLpsFetchedFrmLps",
+                            "isSkuEolPriced",
+                            "isTransactionELA",
+                            "itemPath",
+                            "itemType",
+                            "lineNumber",
+                            "lineOrigin",
+                            "lineType",
+                            "unitListPrice",
+                            "maxAllowedDiscStd",
+                            "mlbIndicator",
+                            "negotiatedDiscNs",
+                            "negotiatedDiscount",
+                            "negotiatedNetPriceAmt",
+                            "nonStandardDisc",
+                            "nphDate",
+                            "objectId",
+                            "oemRebFlag",
+                            "partNumber",
+                            "promoDisc",
+                            "quantity",
+                            "quoteObjectId",
+                            "refurbishedFlag",
+                            "selectedPath",
+                            "soaSubscriptionType",
+                            "sourceObjectId",
+                            "sourceType",
+                            "uiHide",
+                            "velocityFlag",
+                            "wfPriced",
+                            "wplListPrice",
+                            "updatedTimeStamp",
+                            "updatedBy",
+                            "updatedOn",
+                            "monthlyCredit",
+                            "isCombinedServiceFlag",
+                            "unitNetPriceQtyInclCredit",
+                            "listPrice",
+                            "quoteLineActive",
+                            "cqQuoteLineExtn",
+                            "quoteMarginLine",
+                            "finalDiscount",
+                            "buyMethod",
+                            "isXaasSKu",
+                            "unitNetPriceBeforeCredit",
+                            "IS_PBR",
+                            "negotiatedAdjustedDisc",
+                            "rollupUnitNet",
+                            "rollupNetPriceAmt",
+                            "unitNetPriceQty",
+                            "isPosSkuDisable",
+                            "shipToCountry",
+                            "userFaActed",
+                            "rollupMinorLineIdentifier",
+                            "adjustedDisc",
+                            "soaServiceable",
+                            "rollupUnitNetStd",
+                            "rollupLeadTime",
+                            "isSmartProvisioned",
+                            "rollupEffectiveDisc",
+                            "rollupExtNetPriceAmtStd",
+                            "isElaFamily",
+                            "ciscoOnlyBuyMethod",
+                            "rollupTradeInCreditAmtNs",
+                            "rollupExtListPriceAmt",
+                            "rollupTotalDisc",
+                            "isLock",
+                            "billingAmount",
+                            "subtotalMarker",
+                            "rollupUnitListPrice",
+                            "rollupEffectiveDiscStd",
+                            "rollupUnitNetBeforeCredit",
+                            "rollupTotalCredit",
+                            "siteObjectId",
+                            "detachServicesFlag",
+                            "serviceToSiteObjectId",
+                            "enrichmentStatus",
+                            "rollupTotalDiscAmt",
+                            "lineTypeDesc",
+                            "lineTypeSubTypeDesc",
+                            "finalNetPriceUnrounded"
+                          ]
+                        }
+                      ]
+                    },
+                    "isGPNSpecialPriced": {
+                      "type": "string"
+                    },
+                    "distiFulfillmentDetails": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "isFaDeal": {
+                      "type": "string"
+                    },
+                    "createdOn": {
+                      "type": "string"
+                    },
+                    "quoteExpirationDate": {
+                      "type": "string"
+                    },
+                    "taa": {
+                      "type": "string"
+                    },
+                    "stringent": {
+                      "type": "boolean"
+                    },
+                    "priceListId": {
+                      "type": "integer"
+                    },
+                    "contractualDisc": {
+                      "type": "string"
+                    },
+                    "serviceToSiteObjectId": {
+                      "type": "string"
+                    },
+                    "sourceType": {
+                      "type": "integer"
+                    },
+                    "quoteName": {
+                      "type": "string"
+                    },
+                    "finalized": {
+                      "type": "boolean"
+                    },
+                    "netPriceDeal": {
+                      "type": "string"
+                    },
+                    "bomState": {
+                      "type": "integer"
+                    },
+                    "lastPricedDate": {
+                      "type": "string"
+                    },
+                    "cartId": {
+                      "type": "integer"
+                    },
+                    "bomSource": {
+                      "type": "string"
+                    },
+                    "federalFlag": {
+                      "type": "string"
+                    },
+                    "quoteImportDate": {
+                      "type": "string"
+                    },
+                    "tradeInState": {
+                      "type": "integer"
+                    },
+                    "isQ2oEligible": {
+                      "type": "string"
+                    },
+                    "fulfillmentSourceId": {
+                      "type": "integer"
+                    },
+                    "intendedUse": {
+                      "type": "integer"
+                    },
+                    "quoteCategory": {
+                      "type": "integer"
+                    },
+                    "customerCatalogFlag": {
+                      "type": "string"
+                    },
+                    "partnerInfo": {
+                      "type": "object",
+                      "properties": {
+                        "createdOn": {
+                          "type": "string"
+                        },
+                        "updatedOn": {
+                          "type": "string"
+                        },
+                        "createdForBeGeoId": {
+                          "type": "integer"
+                        },
+                        "createdForPartnerUserId": {
+                          "type": "integer"
+                        },
+                        "objectId": {
+                          "type": "integer"
+                        },
+                        "pdbBeGeoId": {
+                          "type": "integer"
+                        },
+                        "countryCd": {
+                          "type": "string"
+                        },
+                        "pdbSiteId": {
+                          "type": "integer"
+                        },
+                        "pdbBeID": {
+                          "type": "integer"
+                        },
+                        "pgtmvBeID": {
+                          "type": "integer"
+                        },
+                        "leadSource": {
+                          "type": "string"
+                        },
+                        "confidenceOfDealClosing": {
+                          "type": "integer"
+                        },
+                        "saleType": {
+                          "type": "string"
+                        },
+                        "dealApprovedDate": {
+                          "type": "string"
+                        },
+                        "dealSubmittedDate": {
+                          "type": "string"
+                        },
+                        "targetApprovalDate": {
+                          "type": "string"
+                        },
+                        "partnerName": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "createdOn",
+                        "updatedOn",
+                        "createdForBeGeoId",
+                        "createdForPartnerUserId",
+                        "objectId",
+                        "pdbBeGeoId",
+                        "countryCd",
+                        "pdbSiteId",
+                        "pdbBeID",
+                        "pgtmvBeID",
+                        "leadSource",
+                        "confidenceOfDealClosing",
+                        "saleType",
+                        "dealApprovedDate",
+                        "dealSubmittedDate",
+                        "targetApprovalDate",
+                        "partnerName"
+                      ]
+                    },
+                    "quoteStatusId": {
+                      "type": "integer"
+                    },
+                    "isVASystemSelected": {
+                      "type": "string"
+                    },
+                    "fulfillmentType": {
+                      "type": "string"
+                    },
+                    "quoteId": {
+                      "type": "integer"
+                    },
+                    "cbnStatusId": {
+                      "type": "integer"
+                    },
+                    "frameAgreement": {
+                      "type": "string"
+                    },
+                    "ironportFlag": {
+                      "type": "string"
+                    },
+                    "lastPricedAsTimeStamp": {
+                      "type": "string"
+                    },
+                    "smbExpirationDate": {
+                      "type": "string"
+                    },
+                    "active": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "nsQuoteExtn",
+                    "isNsCreditExists",
+                    "updatedBy",
+                    "updatedTimeStamp",
+                    "updatedOn",
+                    "gdrFlag",
+                    "distiException",
+                    "siteObjectId",
+                    "atOrBelowFlag",
+                    "shipToCountry",
+                    "cbnSplitEligible",
+                    "isDistiQ2oEligible",
+                    "isDiscountPublished",
+                    "finishState",
+                    "federalFlg",
+                    "fetchedWsTaaPref",
+                    "sdgCustomerTechSelectFlag",
+                    "isDiscGuidanceViewed",
+                    "gebCallRequired",
+                    "stdIncrFlag",
+                    "crpFlag",
+                    "rewardExpiryVariance",
+                    "autoApprove",
+                    "oaStatus",
+                    "eaEligibleCheck",
+                    "quoteStatusDesc",
+                    "custOptInPreference",
+                    "createdBy",
+                    "billingAddress",
+                    "cbnStatusDesc",
+                    "quoteContacts",
+                    "intendedUseDesc",
+                    "quoteCategoryDesc",
+                    "fulfillementType",
+                    "priceListInfo",
+                    "pgtmvPartnerBeGeoId",
+                    "netPriceProtectionDate",
+                    "incentives",
+                    "majorLineList",
+                    "isGPNSpecialPriced",
+                    "distiFulfillmentDetails",
+                    "isFaDeal",
+                    "createdOn",
+                    "quoteExpirationDate",
+                    "taa",
+                    "stringent",
+                    "priceListId",
+                    "contractualDisc",
+                    "serviceToSiteObjectId",
+                    "sourceType",
+                    "quoteName",
+                    "finalized",
+                    "netPriceDeal",
+                    "bomState",
+                    "lastPricedDate",
+                    "cartId",
+                    "bomSource",
+                    "federalFlag",
+                    "quoteImportDate",
+                    "tradeInState",
+                    "isQ2oEligible",
+                    "fulfillmentSourceId",
+                    "intendedUse",
+                    "quoteCategory",
+                    "customerCatalogFlag",
+                    "partnerInfo",
+                    "quoteStatusId",
+                    "isVASystemSelected",
+                    "fulfillmentType",
+                    "quoteId",
+                    "cbnStatusId",
+                    "frameAgreement",
+                    "ironportFlag",
+                    "lastPricedAsTimeStamp",
+                    "smbExpirationDate",
+                    "active"
+                  ]
+                }
+              ]
+            },
+            "dealType": {
+              "type": "integer"
+            },
+            "dealStatus": {
+              "type": "integer"
+            },
+            "mdmDealExpirationDate": {
+              "type": "string"
+            },
+            "lastApprovalDate": {
+              "type": "string"
+            },
+            "createdOn": {
+              "type": "string"
+            },
+            "updatedOn": {
+              "type": "string"
+            },
+            "dealDuration": {
+              "type": "integer"
+            },
+            "dealSource": {
+              "type": "integer"
+            },
+            "dealSourceDesc": {
+              "type": "string"
+            },
+            "endCustomer": {
+              "type": "object",
+              "properties": {
+                "objectId": {
+                  "type": "integer"
+                },
+                "crId": {
+                  "type": "integer"
+                },
+                "endCustomerName": {
+                  "type": "string"
+                },
+                "addressLine1": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zipCode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "pdrUpdateFlag": {
+                  "type": "string"
+                },
+                "endCustomerType": {
+                  "type": "string"
+                },
+                "SALES_COVERAGE": {
+                  "type": "string"
+                },
+                "isoCountryCode": {
+                  "type": "string"
+                },
+                "hqPartyId": {
+                  "type": "integer"
+                },
+                "hqBranchIndicator": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "objectId",
+                "crId",
+                "endCustomerName",
+                "addressLine1",
+                "city",
+                "state",
+                "zipCode",
+                "county",
+                "country",
+                "pdrUpdateFlag",
+                "endCustomerType",
+                "SALES_COVERAGE",
+                "isoCountryCode",
+                "hqPartyId",
+                "hqBranchIndicator"
+              ]
+            },
+            "erateFlg": {
+              "type": "string"
+            },
+            "apprFlg": {
+              "type": "string"
+            },
+            "atOrBelowFlag": {
+              "type": "string"
+            },
+            "updatedBy": {
+              "type": "string"
+            },
+            "bridgeFlag": {
+              "type": "string"
+            },
+            "creatorPaeUserId": {
+              "type": "integer"
+            },
+            "dealCreatorRole": {
+              "type": "integer"
+            },
+            "isThresholdMeetFlag": {
+              "type": "string"
+            },
+            "dmUpdateDate": {
+              "type": "string"
+            },
+            "expectedCloseDateAsDate": {
+              "type": "string"
+            },
+            "isDistiFacilitatedDrop": {
+              "type": "string"
+            },
+            "createdBy": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "updatedTimeStamp",
+            "identifySingleAMFlag",
+            "mdmDealStatus",
+            "p360DealFlag",
+            "pdrOptyDescStrategicValue",
+            "pdrProdValue",
+            "pdrServValue",
+            "prodSalesPath",
+            "publishDiscountFlag",
+            "qfFormId",
+            "rfpFlag",
+            "dealId",
+            "dealName",
+            "dealObjectId",
+            "dealStatusDesc",
+            "activeWorkflow",
+            "dealExpBookDate",
+            "dealExpProductAmount",
+            "dealExpServiceAmount",
+            "dealTypeDesc",
+            "sfdcIntegration",
+            "dealScope",
+            "dealScopeId",
+            "businessScenario",
+            "businessScenarioId",
+            "createrDetail",
+            "teamDetails",
+            "quotes",
+            "dealType",
+            "dealStatus",
+            "mdmDealExpirationDate",
+            "lastApprovalDate",
+            "createdOn",
+            "updatedOn",
+            "dealDuration",
+            "dealSource",
+            "dealSourceDesc",
+            "endCustomer",
+            "erateFlg",
+            "apprFlg",
+            "atOrBelowFlag",
+            "updatedBy",
+            "bridgeFlag",
+            "creatorPaeUserId",
+            "dealCreatorRole",
+            "isThresholdMeetFlag",
+            "dmUpdateDate",
+            "expectedCloseDateAsDate",
+            "isDistiFacilitatedDrop",
+            "createdBy"
+          ]
+        }
+      },
+      "required": [
+        "deal"
+      ]
+    }
+  },
+  "required": [
+    "applicationArea",
+    "responseStatus",
+    "messages",
+    "dataArea"
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+  
+    <apikit:config xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" name="mgt-exp-orders-api-config" raml="mgt-exp-orders-api.raml" consoleEnabled="false" doc:name="Router"/>
+    
+    <flow name="mgt-exp-orders-api-main">
+        <http:listener xmlns:http="http://www.mulesoft.org/schema/mule/http" config-ref="mgt-exp-orders-api-httpListenerConfig" path="${http.path}" doc:name="HTTP"/>
+        <apikit:router xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" config-ref="mgt-exp-orders-api-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="IdentityExceptionStrategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+<flow name="duo-experience-cisco-console">
+        <http:listener config-ref="mgt-exp-orders-api-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <apikit:console config-ref="mgt-exp-orders-api-config" doc:name="APIkit Console"/>
+    </flow>
+    <flow name="post:/book:mgt-exp-orders-api-config">
+        
+        <flow-ref name="mgt-exp-orders-flow" doc:name="Flow Reference"/>
+
+<!--         <set-payload value="{ -->
+<!-- &quot;base64&quot; : #[flowVars.originalPayload], -->
+<!-- &quot;status&quot; : &quot;Successs&quot;, -->
+<!-- &quot;JobId&quot; : &quot;123456789&quot; -->
+
+<!-- }" doc:name="Set Payload"/> -->
+        <exception-strategy ref="globalCatch_Exception_Strategy1" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="post:/quotes:mgt-exp-orders-api-config">
+        <flow-ref name="mgt-exp-quotes-flow" doc:name="Flow Reference"/>
+        <exception-strategy ref="globalCatch_Exception_Strategy1" doc:name="Reference Exception Strategy"/>
+    </flow>
+
+</mule>
