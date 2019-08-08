@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mycompany</groupId>
+	<groupId>171dc4f6-5a2c-4c9f-a211-493c6e4d0ff1</groupId>
 	<artifactId>mgt-exp-orders-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule</packaging>
 	<name>Mule mgt-exp-orders-api Application</name>
 
@@ -15,7 +15,9 @@
 
 		<mule.version>3.9.1</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
-	</properties>
+	
+    <type>---- select project type ----</type>
+    </properties>
 
 	<build>
 		<plugins>

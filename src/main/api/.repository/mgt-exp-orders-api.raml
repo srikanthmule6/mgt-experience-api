@@ -1,26 +1,21 @@
 #%RAML 1.0
 title: mgt-exp-orders-api
 baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/4aa1e4f2-5e78-403c-9c2c-7e528832bd35/api/v1/orders # baseUri: https://localhost:8081/api/v1/orders
-protocols: https
 version: v1
 
-securitySchemes:
-  client-authentcation: !include exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/client-authentication/1.0.0/client-authentication.raml
-
 traits:
-  order-api-headers: !include exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/mgt-ext-orders-headers/1.0.0/mgt-ext-orders-headers.raml
+  order-api-headers: !include exchange_modules/171dc4f6-5a2c-4c9f-a211-493c6e4d0ff1/mgt-exp-order/1.0.0/mgt-exp-order-headers.raml
+  client-security: !include exchange_modules/171dc4f6-5a2c-4c9f-a211-493c6e4d0ff1/client-securityraml/1.0.0/client-security.raml
 
-uses:
-  orders-lib: exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/mgt-exp-orders-lib/1.0.0/mgt-exp-orders-lib.raml
-  
-/order:
+/book:
   description: Experience api endpoint pointed to process api.
   displayName: order
-  is: [order-api-headers]
+  is: [order-api-headers,client-security]
   post:
     body: 
       application/json:
-        example: !include exchange_modules/3eb883d6-83a6-4877-8984-b44ba274fff0/mgt-exp-orders-lib/1.0.0/examples/orderRequest.raml
+        example: !include examples/orderRequest.json
+        schema: !include schema/book.schema 
     responses:
       200:
         body:
@@ -30,4 +25,41 @@ uses:
   "JobId": "123456789"
 }
   
+/quotes:
+  description: Experience api endpoint pointed to process api.
+  displayName: quotes
+  is: [order-api-headers,client-security]
+  post:
+    body:
+      application/json:
+        example: !include examples/quoteRequest.json
+        schema: !include schema/quote.schema
+    responses:
+      200:
+        body:
+          application/json:
+            example:  {    
+  "status": "Successs",
+  "JobId": "123456789"
+}
+/saas:
+  /provision:
+    description: Experience api endpoint pointed to process api.
+    displayName: provision
+    is: [order-api-headers,client-security]
+    post:
+      body:
+        application/json:
+          example: !include examples/provisionRequest.json
+          schema: !include schema/provision.schema
+      responses:
+        200:
+          body:
+            application/json:
+              example: {    
+  "status": "Successs",
+  "JobId": "123456789"
+}
+                
+      
   
